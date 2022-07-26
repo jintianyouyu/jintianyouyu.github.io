@@ -4,14 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="yakit-单兵作战武器库, 今天有雨">
+    <meta name="keywords" content="APT-Hunter 日志分析工具（未完待续...）, 今天有雨">
     <meta name="description" content="
-站在前人的肩膀上，先给出官方链接：https://github.com/yaklang/yakit
+我们是站在巨人的肩膀上，参考链接：https://github.com/threatpage/APT-Hunter
+详细的工具介绍看以上网站
 
-前言
-写在最前面，技术小白刚入门，不敢过多评价，简单记录工具使用的体验，在使用重有个指导与参考，如有不对的海涵
 
-工具刚刚起步，内部还是">
+
+工具简介在日志分析过程中每次看到Windows日志都比较头疼，这次发现了一个专门分析Win">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -25,7 +25,7 @@
 
     
 
-    <title>yakit-单兵作战武器库 | 今天有雨</title>
+    <title>APT-Hunter 日志分析工具（未完待续...） | 今天有雨</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -252,12 +252,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">yakit-单兵作战武器库</h1>
+                    <h1 class="description center-align post-title">APT-Hunter 日志分析工具（未完待续...）</h1>
                 </div>
             </div>
         </div>
@@ -385,8 +385,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/" class="post-category">
-                                信息收集自动化工具
+                            <a href="/categories/%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90-Windows/" class="post-category">
+                                日志分析-Windows
                             </a>
                         
                     </div>
@@ -398,7 +398,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-07-22
+                    2022-07-24
                 </div>
                 
 
@@ -407,7 +407,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    2.2k
                 </div>
                 
 
@@ -433,311 +433,214 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <ul>
-<li>站在前人的肩膀上，先给出官方链接：<a target="_blank" rel="noopener" href="https://github.com/yaklang/yakit">https://github.com/yaklang/yakit</a></li>
+<li>我们是站在巨人的肩膀上，参考链接：<a target="_blank" rel="noopener" href="https://github.com/threatpage/APT-Hunter">https://github.com/threatpage/APT-Hunter</a><ul>
+<li>详细的工具介绍看以上网站</li>
 </ul>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
-<li><p>写在最前面，技术小白刚入门，不敢过多评价，简单记录工具使用的体验，在使用重有个指导与参考，如有不对的海涵</p>
+</li>
+</ul>
+<h2 id="工具简介"><a href="#工具简介" class="headerlink" title="工具简介"></a>工具简介</h2><p>在日志分析过程中每次看到Windows日志都比较头疼，这次发现了一个专门分析Windows日志的工具，做个记录。</p>
+<p> APT- hunter是一款针对窗口事件日志的威胁搜索工具，由紫色团队开发，用于检测隐藏在窗口事件日志海洋中的APT移动，以减少发现可疑活动的时间。此工具将充分利用收集的Windows事件日志，并确保不会错过配置为检测的关键事件。</p>
+<p>APT-Hunter使用python3构建，因此要使用该工具，需要安装所需的库</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">python3 <span class="token operator">-</span>m pip install <span class="token operator">-</span>r Requirements<span class="token punctuation">.</span>txt <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="工具功能"><a href="#工具功能" class="headerlink" title="工具功能"></a>工具功能</h2><p>APT-Hunter有两个部分共同工作，帮助用户快速获得他想要的数据。这个工具将用于快速的windows日志分析。</p>
 <ul>
-<li><p>工具刚刚起步，内部还是有些小问题，如扫描记录显示不全</p>
-</li>
-<li><p>各个模块之间的协同能力欠缺，或者说被动扫描欠缺，需要手动去操作，半自动或者自动化检测能力需要提高</p>
-<p>《就这些》</p>
-</li>
+<li>收集日志：用户可以手动收集Windows的 CSV 和 EVTX 格式的日志，或者使用工具给出的 powershell 脚本来自动提取所需的日志，后面我们详细讲解。</li>
+<li>可通过 APT-hunter 内置库分析CSV日志与EVTX日志<ul>
+<li>想看GUI需要上传到 <a target="_blank" rel="noopener" href="https://github.com/google/timesketch">timesketch</a> 进行分析</li>
 </ul>
 </li>
-<li><p>这个工具官方给出的指导手册与安装方式相当详细，这里也不用再多赘述，大家按照流程正常安装使用即可。</p>
+</ul>
+<h3 id="Windows日志简述"><a href="#Windows日志简述" class="headerlink" title="Windows日志简述"></a>Windows日志简述</h3><ul>
+<li><p>APT-Hunter工具可分析的Windows系统日志，写道这里了，对Windows日志简单做个介绍</p>
 <ul>
-<li>想看详细的工具介绍直接移步yakit 官网，这里只是自己的部分记录，并不全面</li>
-</ul>
-</li>
-<li><p>打造 yakit 这款工具的团队雄心壮志，将持续关注</p>
+<li><p>Windows系统日志主要有三种（注意我们这里说的是系统日志）</p>
+<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724155906806.png"></p>
 <ul>
-<li>引用工具介绍的一句话：<code>akit是基于Yak语言开发的网络安全单兵工具，旨在打造一个覆盖渗透测试全流程的网络安全工具库</code></li>
+<li>系统日志: System.evtx，操作系统自身组件产生的日志事件，比如驱动、系统组件和应用软件的崩溃以及数据丢失错误等</li>
+<li>应用程序日志: Application.evtx ，记录应用程序或系统程序运行方面的日志事件，比如数据库程序可以在应用程序日志中记录文件错误，应用的崩溃记录等</li>
+<li>安全日志: Security.evtx ，记录系统的安全审计日志事件，比如登录事件、对象访问、进程追踪、特权调用、帐号管理、策略变更等</li>
 </ul>
 </li>
 </ul>
-<h2 id="工具下载安装"><a href="#工具下载安装" class="headerlink" title="工具下载安装"></a>工具下载安装</h2><ul>
-<li><p>通过 GitHub 地址下载：<a target="_blank" rel="noopener" href="https://github.com/yaklang/yakit/releases">https://github.com/yaklang/yakit/releases</a></p>
 </li>
-<li><p>此处安装在Windows中，双击安装，不让选择路径，程序自动指定路径。</p>
-</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722165911292.png"></p>
+<li><p>APT-Hunter工具可分析以下Windows日志</p>
 <ul>
-<li><p>安装完成后开始进行配置操作，先点击<code>核心引擎安装升级</code>，然后点击一键更新，等待更新完成</p>
+<li><p>Sysmon：Windows与Linux系统上默认没有，这个日志记录工具需要安装</p>
 <ul>
-<li>后面会跳出几个弹窗，ok就好</li>
+<li>安装时，可选择记录网络连接安装等，包括每个连接的源进程、IP 地址、端口号、主机名和端口名，记录注册表和文件的操作记录等信息<ul>
+<li>详细安装方式看此处：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36618918/article/details/123452710">https://blog.csdn.net/qq_36618918/article/details/123452710</a></li>
 </ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722170227972.png"></p>
 </li>
-<li><p>已管理员启动</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722170458045.png"></p>
-</li>
-<li><p>连接引擎</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722170615289.png"></p>
-</li>
-<li><p>连接引擎之后，正式进入工具使用</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722170643462.png"></p>
-</li>
+<li>Windows系统安装后在以下目录查看<code>应用程序和服务日志/Microsoft/Windows/Sysmon/Operational</code></li>
 </ul>
-<h2 id="更新插件源"><a href="#更新插件源" class="headerlink" title="更新插件源"></a>更新插件源</h2><h3 id="更新插件源-一-问题已解决"><a href="#更新插件源-一-问题已解决" class="headerlink" title="更新插件源(一)-问题已解决"></a>更新插件源(一)-问题已解决</h3><ul>
-<li><p>看到前面我们的yakit已经安装完成，进入工具使用界面，但是先不要着急体验，我们进入后首先要更新插件源，否则好多功能无法使用</p>
-</li>
-<li><p>但是，使用工具自动更新不成功，或者更新后无法显示</p>
+<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724161426018.png"></p>
 <ul>
-<li>点击右上角的配置，更新Yakit插件源，官方与第三方<ul>
-<li>官方直接使用GitHub下载，第三方使用了GitHub的加速器下载（但是都不行）</li>
+<li>工具下载：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/sysinternals/downloads/sysmon">https://docs.microsoft.com/zh-cn/sysinternals/downloads/sysmon</a></li>
 </ul>
 </li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722174625148.png"></p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722174600861.png"></p>
+<li><p>Security：安全日志</p>
 </li>
-<li><p>各位师傅可以试试，我是没有更新成功，更新后工具中还是没有显示插件，所以只能下载后本地导入</p>
+<li><p>System：系统日志</p>
+</li>
+<li><p>Powershell：PowerShell 操作的详细信息，例如启动和停止引擎和提供程序，以及执行 PowerShell 命令。</p>
 <ul>
-<li>Yakit 的官方插件<strong>仓库</strong>地址为 <code>https://github.com/yaklang/yakit-store</code></li>
-<li>上图中的官方<strong>POC</strong>源：<code>https://github.com/projectdiscovery/nuclei-templates</code></li>
+<li>日志查看位置<code>应用程序和服务日志/PowerShellCore/Operational</code>，默认不开启，需要手动开启，方式比较多：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_logging_windows?view=powershell-7.2">https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_logging_windows?view=powershell-7.2</a></li>
+<li>本地组策略-用户配置-管理模板-Windows Powershell<ul>
+<li>这里也包含了一部分关于Powershell的设置</li>
 </ul>
 </li>
-<li><p>下载对应的源文件，通过本地导入，本地导入时注意一个是仓库，一个POC，分开导入即可</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722180608970.png"></p>
-</li>
-<li><p>都写到这里了上面的也就不删除了，前面遇到这个问题搞了好久最终决定用本地加载，本地刚加载完，发现工具有更新，更新之后，以上的问题自己好了，，，好了就好了，我们接着往下操作就是了</p>
-</li>
 </ul>
-<h3 id="更新插件源-二"><a href="#更新插件源-二" class="headerlink" title="更新插件源(二)"></a>更新插件源(二)</h3><ul>
-<li><p>承接上面的操作，使用官方源应为直接使用github所以会慢一点，这里建议直接使用第三方仓库源</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722213312332.png"></p>
+<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724164532778.png"></p>
 </li>
-<li><p>安装完成后就能在插件管理中看到对应的插件</p>
+<li><p>Powershell_Operational：记录有关 PowerShell 操作的详细信息，例如启动和停止引擎和提供程序，以及执行 PowerShell 命令</p>
 <ul>
-<li>此处建议在网络良好的情况下，全选插件商店，下载到本地，测试过程中总是出现获取不到的情况<ul>
-<li>下载后可在旁边的<code>本地</code>处看到</li>
+<li>查看日志位置<code>应用程序和服务日志-Microsoft-Windows-PowerShell-Operational</code></li>
+<li>与前面的Powershellcode一样，需要进行配置，配置方法类似，<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_logging?view=powershell-5.1">https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_logging?view=powershell-5.1</a></li>
 </ul>
 </li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722213954813.png"></p>
-</li>
-<li><p>此处我们已<code>重置 nuclei Yaml PoC 数据库</code>次插件为例</p>
+<li><p>ScheduledTask：记录计划任务的启动、报错</p>
 <ul>
-<li><p>点击下载，即可添加到插件仓库</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722214411843.png"></p>
-</li>
-<li><p>点击<code>启动任务</code>即可完成插件功能</p>
+<li>计划任务日志，注意和计划任务列表不同，默认不开启，启用方式如下图</li>
+</ul>
+<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724174516076.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">代码 0 或 0x0： 操作成功完成。
+代码 1 或 0x1： 调用的函数不正确或调用了未知函数。
+代码 10 或 0xa： 环境不正确。
+代码 0x8009000f：常规访问被拒绝<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p>WinRM：属于window远程管理的一种方式，默认关闭需要手动开启，但日志位置在哪里还真没找到</p>
 <ul>
-<li>还没理解透：应该是对POC文件进行加载或者重新加载</li>
-<li>那么其他的插件可自行研究</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722214606492.png"></p>
-</li>
-<li><p>如：被动扫描插件，就是在抓包过程中进行被动漏洞探测等</p>
-</li>
+<li>开启/关闭方法<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_23663693/article/details/121654390">https://blog.csdn.net/qq_23663693/article/details/121654390</a></li>
 </ul>
 </li>
+<li><p>TerminalServices：通俗的远程桌面，远程桌面日志Windows一般是在Windows日志的Security （安全）日志中</p>
+</li>
+<li><p>Windows_Defender：Windows自己的杀毒软件的日志记录</p>
+</li>
 </ul>
-<h2 id="手工渗透测试"><a href="#手工渗透测试" class="headerlink" title="手工渗透测试"></a>手工渗透测试</h2><h3 id="MITM模块"><a href="#MITM模块" class="headerlink" title="MITM模块"></a>MITM模块</h3><h4 id="MITM-中间人代理与劫持"><a href="#MITM-中间人代理与劫持" class="headerlink" title="MITM-中间人代理与劫持"></a>MITM-中间人代理与劫持</h4><ul>
-<li><p>这里类似与BurpSuite的拦截功能，实现的方式有所不同，带着这个思路往下走</p>
+</li>
+</ul>
+<h2 id="工具参数"><a href="#工具参数" class="headerlink" title="工具参数"></a>工具参数</h2><ul>
+<li>参数</li>
+</ul>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell"><span class="token operator">/</span><span class="token operator">/</span>这里给出了基本的日志分析示例，后面举例说明
+usage: APT-Hunter<span class="token punctuation">.</span>py <span class="token punctuation">[</span><span class="token operator">-</span>h<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token operator">-</span>p PATH<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token operator">-</span>o OUT<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token operator">-</span>t <span class="token punctuation">&#123;</span>csv<span class="token punctuation">,</span>evtx<span class="token punctuation">&#125;</span><span class="token punctuation">]</span>
+                     <span class="token punctuation">[</span><span class="token operator">--</span>security SECURITY<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token operator">--</span>system SYSTEM<span class="token punctuation">]</span>
+                     <span class="token punctuation">[</span><span class="token operator">--</span>scheduledtask SCHEDULEDTASK<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token operator">--</span>defender DEFENDER<span class="token punctuation">]</span>
+                     <span class="token punctuation">[</span><span class="token operator">--</span>powershell POWERSHELL<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token operator">--</span>powershellop POWERSHELLOP<span class="token punctuation">]</span>
+                     <span class="token punctuation">[</span><span class="token operator">--</span>terminal TERMINAL<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token operator">--</span>winrm WINRM<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token operator">--</span>sysmon SYSMON<span class="token punctuation">]</span>
+<span class="token operator">/</span><span class="token operator">/</span>参数英文留着，英文好的可以就直接看
+optional arguments:
+  <span class="token operator">-</span>h<span class="token punctuation">,</span> <span class="token operator">--</span>help            show this help message and <span class="token keyword">exit</span>
+  						显示帮助信息并推出
+  <span class="token operator">-</span>p PATH<span class="token punctuation">,</span> <span class="token operator">--</span>path PATH  path to folder containing windows event logs generated
+                        by the powershell log collector
+                        通过powershell脚本获取到的日志路径，一般写绝对<span class="token operator">/</span>相对路径都可以，前提是再当前文件夹下，获取日志的文件名：wineventlog/
+  <span class="token operator">-</span>o OUT<span class="token punctuation">,</span> <span class="token operator">--</span>out OUT     output file name	输出文件名
+  <span class="token operator">-</span>t <span class="token punctuation">&#123;</span>csv<span class="token punctuation">,</span>evtx<span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token operator">--</span><span class="token function">type</span> <span class="token punctuation">&#123;</span>csv<span class="token punctuation">,</span>evtx<span class="token punctuation">&#125;</span>
+                        csv <span class="token punctuation">(</span> logs <span class="token keyword">from</span> <span class="token function">get-eventlog</span> or windows event log GUI
+                        or logs <span class="token keyword">from</span> <span class="token function">Get-WinEvent</span> <span class="token punctuation">)</span> <span class="token punctuation">,</span> evtx <span class="token punctuation">(</span> EVTX extension
+                        windows event log <span class="token punctuation">)</span>
+                        需要分析的日志的类型，powershel脚本两个脚本获取的日志类型为csv<span class="token punctuation">,</span>evtx，不同的日志类型文件使用哪一种
+
+<span class="token operator">/</span><span class="token operator">/</span>以下是单独分析某一种日志的参数
+  <span class="token operator">--</span>security SECURITY   Path to Security Logs
+  <span class="token operator">--</span>system SYSTEM       Path to System Logs
+  <span class="token operator">--</span>scheduledtask SCHEDULEDTASK
+                        Path to Scheduled Tasks Logs
+  <span class="token operator">--</span>defender DEFENDER   Path to Defender Logs
+  <span class="token operator">--</span>powershell POWERSHELL
+                        Path to Powershell Logs
+  <span class="token operator">--</span>powershellop POWERSHELLOP
+                        Path to Powershell Operational Logs
+  <span class="token operator">--</span>terminal TERMINAL   Path to TerminalServices LocalSessionManager Logs
+  <span class="token operator">--</span>winrm WINRM         Path to Winrm Logs
+  <span class="token operator">--</span>sysmon SYSMON       Path to Sysmon Logs<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="获取系统日志"><a href="#获取系统日志" class="headerlink" title="获取系统日志"></a>获取系统日志</h2><ul>
+<li>系统日志可以手动获取也可以通过工具自带的脚本获取<ul>
+<li>手动获取参照之前的Windows日志简述中的路径进行导出即可，没找到路径的还得靠各位师傅补充了</li>
+</ul>
+</li>
+</ul>
+<h3 id="自带脚本获取日志"><a href="#自带脚本获取日志" class="headerlink" title="自带脚本获取日志"></a>自带脚本获取日志</h3><ul>
+<li><p>使用工具自带的powershell脚本文件，运行脚本文件：<code>windows-log-collector-full-v3-CSV.ps1</code>与<code>windows-log-collector-full-v3-EVTX.ps1</code></p>
+</li>
+<li><p>运行脚本文件报错，那就解决报错</p>
 <ul>
-<li>这里的插件是灰色，勾选下面的插件自动加载，插件就可选了</li>
+<li>解决的参考连接：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/jackadam/p/15704911.html">https://www.cnblogs.com/jackadam/p/15704911.html</a></li>
 </ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722215750130.png"></p>
+<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724110626417.png"></p>
 </li>
-<li><p>点击劫持启动，浏览器配置对应的拦截IP地址与端口（与BP一致）</p>
+<li><p>输入命令：<code>get-executionpolicy</code>显示<code>Restricted</code>，<code>Restricted</code>表示：</p>
 <ul>
-<li>1、拦截到数据包后放行，丢弃，劫持响应（对返回数据包拦截）</li>
-<li>2、已启用就是在上面配置过程中勾选的，全部：可以将所有的验证脚本都勾选上</li>
-<li>3、劫持响应是对所有的数据包进行拦截包括返回的数据包；手动劫持是开始拦截；自动方行是不拦截</li>
-<li>剩余的小点就不再说了如过滤器、匹配标记等</li>
+<li>Windows 客户端计算机的默认执行策略</li>
+<li>允许单个命令，但不允许脚本</li>
+<li>阻止运行所有脚本文件，包括格式化和配置文件 () 、模块脚本文件 () 和 .ps1xml .psm1 PowerShell 配置文件 .ps1 ()</li>
 </ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722220310351.png"></p>
 </li>
-<li><p>此处与bp不同的地方，要想查看返回的响应包，就需要点击劫持响应，查看返回包，没有分屏显示</p>
+</ul>
+<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724111756464.png"></p>
 <ul>
-<li>感觉这个功能不好，没有重放分屏显示，不方便，不知道是不是我没找到</li>
-<li>右键可以发送到Web Fuzzer可以分屏显示不知道与BP是不是一个意思</li>
+<li>需要将<code>Restricted</code>改为<code>RemoteSigned</code>以管理员身份打开PowerShell 输入 <code>set-executionpolicy remotesigned</code>，选择Y，<code>RemoteSigned</code>表示：（后面几句没明白，但是脚本可以运行就可以）<ul>
+<li>Windows 服务器计算机的默认执行策略</li>
+<li>脚本可以运行</li>
+<li>需要受信任的发布者对从 Internet 下载的脚本和配置文件（包括电子邮件和即时消息程序）进行数字签名</li>
+<li>对于在本地计算机上编写且未从 Internet 下载的脚本，不需要数字签名</li>
+<li>如果脚本未受阻止（例如使用 cmdlet），则运行从 Internet 下载且 Unblock-File 未签名的脚本</li>
+<li>从 Internet 来源（而不是 Internet）运行未签名脚本的风险，以及可能是恶意的已签名脚本的风险。</li>
 </ul>
 </li>
-<li><p>右键菜单，这里先提下，后面说到每个模块的功能的时候补充</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722221405473.png"></p>
-</li>
 </ul>
-<h5 id="https证书"><a href="#https证书" class="headerlink" title="https证书"></a>https证书</h5><ul>
-<li><p>这里需要单独说下证书，为了抓取https的数据包没那么就需要安装相关证书，点击后有下载按钮，下载即可</p>
-</li>
-<li><p>下载后将文件后缀改成<code>.crt</code>，右键–安装证书-即可，安装过程不再截图</p>
+<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724112123442.png"></p>
 <ul>
-<li>之后既可以抓取https的数据包了</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723162656970.png"></p>
-</li>
-</ul>
-<h4 id="HTTP-History"><a href="#HTTP-History" class="headerlink" title="HTTP History"></a>HTTP History</h4><ul>
-<li><p>显示历史数据包，点击后显示详情</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722223629028.png"></p>
-</li>
-</ul>
-<h4 id="网站树视角"><a href="#网站树视角" class="headerlink" title="网站树视角"></a>网站树视角</h4><ul>
-<li>直观的看到扫描过的网站</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722223918043.png"></p>
+<li><p>以上报错解决，运行脚本，获取Windows系统的日志文件</p>
 <ul>
-<li><p>右键可发送到三个模块</p>
+<li>会在当前目录下创建wineventlog文件夹，将获取到的日志存在此文件夹下</li>
+<li>下面报错-红字部分，不用管，不存在此项日志就会报错</li>
+</ul>
+<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724112500380.png"></p>
+</li>
+<li><p>日志文件收集成功</p>
 <ul>
-<li>后面看到者三个模块在详细介绍</li>
+<li>csv格式日志文件，使用脚本：<code>windows-log-collector-full-v3-CSV.ps1</code></li>
 </ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722224221232.png"></p>
-</li>
-<li><p>数据包最后的<code>详情</code></p>
+<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724112703115.png"></p>
 <ul>
-<li>可右键发送到Fuzzer模块，也就是数据包重放模块</li>
-<li>下面还有一部分显示，是对数据包的分解，添加了复制功能</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722224441594.png"></p>
+<li><p>evtx格式日志文件，使用脚本<code>windows-log-collector-full-v3-EVTX.ps1</code></p>
+<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724141515595.png" alt="image-20220724141515595"></p>
 </li>
-<li><p>发送的数据包扫描</p>
+</ul>
+</li>
+</ul>
+<h2 id="日志分析"><a href="#日志分析" class="headerlink" title="日志分析"></a>日志分析</h2><ul>
+<li><p>通过以上操作，获取到Windows的相关日志，开始使用命令进行分析</p>
+</li>
+<li><p>官网中给出了三个范例，在日常使用中这三个也就够用了，简单解释下：</p>
 <ul>
-<li>只能选一个，点击开始</li>
+<li>很好理解，全部分析与单独分析，其他单独分析的就不再说了</li>
 </ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722225135291.png"></p>
+</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">//</span>使用APT<span class="token operator">-</span>Hunter<span class="token punctuation">.</span>py工具分析evtx文件日志，日志路径在<span class="token operator">/</span>opt<span class="token operator">/</span>wineventlogs<span class="token operator">/</span>，输出文件名为Project1
+	<span class="token operator">//</span>此处的文件名可任意定义
+<span class="token comment">#python3 APT-Hunter.py  -t evtx  -p /opt/wineventlogs/  -o Project1</span>
+<span class="token operator">//</span>与上一条相同，分析日志类型为csv
+<span class="token comment">#python3 APT-Hunter.py  -t csv  -p /opt/wineventlogs/  -o Project1</span>
+<span class="token operator">//</span>使用APT<span class="token operator">-</span>Hunter<span class="token punctuation">.</span>py工具分析evtx文件日志，单独分析security日志，日志路径在evtx<span class="token operator">/</span>security<span class="token punctuation">.</span>evtx，输出文件名为Project2
+<span class="token comment">#python3 APT-Hunter.py  -t evtx  --security evtx/security.evtx -o Project2</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <ul>
-<li><p>输出扫描结果，这里可以配合工具操作好理解点</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722225221371.png"></p>
-</li>
+<li>将所有日志进行分析后会生成两个文件</li>
 </ul>
-</li>
-</ul>
-<h3 id="Web-Fuzzer-重放模块"><a href="#Web-Fuzzer-重放模块" class="headerlink" title="Web Fuzzer-重放模块"></a>Web Fuzzer-重放模块</h3><ul>
-<li>通过测试感觉自己的理解没有问题，Web Fuzzer应该类似于重放功能<ul>
-<li>部分标签功能还没熟悉，先简单说下使用</li>
-</ul>
-</li>
-</ul>
-<p>在前面的操作中右键有标签选项发送到 Fuzzer，就是发送到重放模块，如下图</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723163408479.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">111_Report.xlsx：此excel工作表将包括从提供给APT-Hunter的每个Windows日志中检测到的所有事件
+111_TimeSketch.csv：您可以将此CSV文件上传到timeketch，以便进行时间轴分析，以帮助您了解攻击的全貌,以GUI的方式显示<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220725123610965.png"></p>
 <ul>
-<li>1、就是将修改好的数据包进行发送，旁边会返回发送的结果数据包</li>
-<li>2、这里有个高级选项，看名字能知道一部分<ul>
-<li>设置代理：配置代理访问内网或者被墙的地址</li>
-<li>HTTPS：发送HTTPS的数据包</li>
-<li>请求HOST：应该是防护绕过的措施</li>
+<li>这里涉及到一个工具<code>timeketch</code>，这又是另一篇内容，工具的安装请移步另一篇文章</li>
 </ul>
-</li>
-<li>3、此处可以修改数据包后通过1发送出去</li>
-</ul>
-<p>这个模块叫做 Web Fuzzer，那么就存在模糊测试的功能，但此处没没明白模糊测试的是哪些内容</p>
-<ul>
-<li>在数据包发送之后，点击<code>详情</code></li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723164043607.png"></p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723164127853.png"></p>
-<ul>
-<li><p>以上图片作为对比，这里点击模糊测试，数据包会发生变化，重新提交数据包</p>
-<ul>
-<li>这里能力有限，这个模糊测试的功能还是没有太明白是什么意思</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723164257481.png"></p>
-</li>
-</ul>
-<p><strong>那这个重放模块就到这里，后面看到具体功能点再做补充</strong></p>
-<h2 id="基础安全工具"><a href="#基础安全工具" class="headerlink" title="基础安全工具"></a>基础安全工具</h2><ul>
-<li>这个模块工具主要是一些基础的安全工具的集成</li>
-</ul>
-<h3 id="爆破与未授权"><a href="#爆破与未授权" class="headerlink" title="爆破与未授权"></a>爆破与未授权</h3><ul>
-<li>看图说话，看到内容就知道，主要是进行认证的爆破，爆破的类型目前就这几种，工具还在更新不知道作者的这个模块会不会更新<ul>
-<li>支持批量扫描，需要上传txt文件</li>
-</ul>
-</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723165906732.png"></p>
-<ul>
-<li><p>爆破最重要的是字典，不添加就使用默认字典，通过<code>更多参数</code>添加</p>
-<ul>
-<li><p>操作简单看图添加即可</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723165958944.png"></p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="基础爬虫"><a href="#基础爬虫" class="headerlink" title="基础爬虫"></a>基础爬虫</h3><ul>
-<li><p>输入需要爬取的目标，开始执行</p>
-<ul>
-<li>2处是该模块的代码，懂代码的师傅可以看看，自己就不班门弄斧了</li>
-<li>3处有点小问题，扫描记过可能会显示不全</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723170453273.png"></p>
-</li>
-<li><p>后面还有一个模块：基础爬虫[local]，自己没卡出来什么不一样，这里就不说了</p>
-</li>
-</ul>
-<h3 id="空间引擎"><a href="#空间引擎" class="headerlink" title="空间引擎"></a>空间引擎</h3><ul>
-<li>这里使用了奇安信的鹰图搜索，写上你的key，开始查询</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723172018976.png"></p>
-<h3 id="子域名收集"><a href="#子域名收集" class="headerlink" title="子域名收集"></a>子域名收集</h3><ul>
-<li><p>输入顶级域名，开始进行子域名查找，还可以查找C端</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723173002613.png"></p>
-</li>
-</ul>
-<h3 id="综合目录扫描"><a href="#综合目录扫描" class="headerlink" title="综合目录扫描"></a>综合目录扫描</h3><ul>
-<li><p>主要是进行目录扫描，类似御剑等工具，关键还是字典</p>
-<ul>
-<li>添加默认自带的字典文件进行扫描</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723173822109.png"></p>
-<ul>
-<li><p>通过额外参数添加自定义的字典文件或文件夹</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723173909878.png"></p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="专项漏洞检测"><a href="#专项漏洞检测" class="headerlink" title="专项漏洞检测"></a>专项漏洞检测</h2><ul>
-<li><p>通过最开始插件商店更新相关漏洞插件，这里可选择对应的漏洞进行检查，并显示检查结果</p>
-<ul>
-<li><p>POC也可以自己写，有相关的说明与插件编写方法</p>
-</li>
-<li><p>支持批量扫描，通过额外配置上传文件</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723174350678.png"></p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="payload管理"><a href="#payload管理" class="headerlink" title="payload管理"></a>payload管理</h2><ul>
-<li><p>通过此处可以上传字典，包括用户名与密码</p>
-<ul>
-<li>相关的按钮就是新增与上传字典，很简单</li>
-<li>此处出现了 Fuzz 模块的渲染，前面说自己不太懂的地方，等用到学会了再补充</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723174828241.png"></p>
-</li>
-</ul>
-<h2 id="Yak-Runner"><a href="#Yak-Runner" class="headerlink" title="Yak Runner"></a>Yak Runner</h2><ul>
-<li><p>这里应该是作者留下的用来测试yak代码的地方，通过运行按钮可以看到自己脚本输出成果</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723175247959.png"></p>
-</li>
-</ul>
-<h2 id="反连管理"><a href="#反连管理" class="headerlink" title="反连管理"></a>反连管理</h2><ul>
-<li>这个模块主要提供了：端口监听、反连服务器、DNSLog、ICMP-SizeLog、TCP-PortLog 五个功能。</li>
-<li>这里还没测试与使用过，暂时先不写<ul>
-<li>根据给出的模块功能，应该是内网穿透，数据包回传与监听的功能</li>
-</ul>
-</li>
-</ul>
-<h2 id="数据处理（小工具）"><a href="#数据处理（小工具）" class="headerlink" title="数据处理（小工具）"></a>数据处理（小工具）</h2><ul>
-<li><p>数据对比，将数据输入对比出不同的地方</p>
-<ul>
-<li>以下是百度百科，随便粘贴的</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723181101591.png"></p>
-</li>
-<li><p>codec，对常见的加密方式的汇总，包括国密算法</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723181259764.png"></p>
-</li>
-</ul>
-<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><ul>
-<li>最后的模块数据库，是对真个操作过程的记录，包括扫描结果的漏洞详情、端口资产、子域名资产、HTTP数据包历史记录等，支持表格导出</li>
-<li>就这样了，后面学会了再进行补充</li>
-</ul>
+<p><strong>难受了，安装timeketch工具报错，未安装完成，等报错解决了再不齐剩下的内容</strong></p>
 
                 
             </div>
@@ -764,7 +667,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jintianyouyu.github.io/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/">https://jintianyouyu.github.io/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/</a>
+                    <a href="https://jintianyouyu.github.io/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/">https://jintianyouyu.github.io/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -852,13 +755,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/">
+                <a href="/2022/07/26/timeketch-%E5%8D%8F%E4%BD%9C%E5%8F%96%E8%AF%81%E6%97%B6%E9%97%B4%E8%BD%B4%E5%88%86%E6%9E%90/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="APT-Hunter 日志分析工具（未完待续...）">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="timeketch-协作取证时间轴分析（未完待续...)">
                         
-                        <span class="card-title">APT-Hunter 日志分析工具（未完待续...）</span>
+                        <span class="card-title">timeketch-协作取证时间轴分析（未完待续...)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -869,14 +772,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-07-24
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-07-26
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90-Windows/" class="post-category">
-                                    日志分析-Windows
+                            <a href="/categories/%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/" class="post-category">
+                                    日志分析
                                 </a>
                             
                             
@@ -901,13 +804,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/07/21/%E6%B0%B4%E6%B3%BD-%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/">
+                <a href="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="水泽-信息收集自动化工具">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="yakit-单兵作战武器库">
                         
-                        <span class="card-title">水泽-信息收集自动化工具</span>
+                        <span class="card-title">yakit-单兵作战武器库</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -918,7 +821,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-22
                             </span>
                         <span class="publish-author">
                             
