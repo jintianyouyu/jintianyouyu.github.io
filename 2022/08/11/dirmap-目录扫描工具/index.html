@@ -4,14 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="APT-Hunter 日志分析工具（未完待续...）, 今天有雨">
-    <meta name="description" content="
-我们是站在巨人的肩膀上，参考链接：https://github.com/threatpage/APT-Hunter
-详细的工具介绍看以上网站
+    <meta name="keywords" content="dirmap-目录扫描工具, 今天有雨">
+    <meta name="description" content="工具下载
+下载地址：https://github.com/H4ckForJob/dirmap
 
-
-
-工具简介在日志分析过程中每次看到Windows日志都比较头疼，这次发现了一个专门分析Win">
+下载工具后，先下载对应的python包，使用清华的pip源，此处使用python3
+pip3 install -i https:&amp;#x2F;&amp;#">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -25,7 +23,7 @@
 
     
 
-    <title>APT-Hunter 日志分析工具（未完待续...） | 今天有雨</title>
+    <title>dirmap-目录扫描工具 | 今天有雨</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -252,12 +250,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">APT-Hunter 日志分析工具（未完待续...）</h1>
+                    <h1 class="description center-align post-title">dirmap-目录扫描工具</h1>
                 </div>
             </div>
         </div>
@@ -385,8 +383,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90-Windows/" class="post-category">
-                                日志分析-Windows
+                            <a href="/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F/" class="post-category">
+                                信息收集-目录扫描
                             </a>
                         
                     </div>
@@ -398,7 +396,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-07-24
+                    2022-08-11
                 </div>
                 
 
@@ -407,7 +405,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    2k
                 </div>
                 
 
@@ -432,215 +430,217 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ul>
-<li>我们是站在巨人的肩膀上，参考链接：<a target="_blank" rel="noopener" href="https://github.com/threatpage/APT-Hunter">https://github.com/threatpage/APT-Hunter</a><ul>
-<li>详细的工具介绍看以上网站</li>
+                <h2 id="工具下载"><a href="#工具下载" class="headerlink" title="工具下载"></a>工具下载</h2><ul>
+<li>下载地址：<a target="_blank" rel="noopener" href="https://github.com/H4ckForJob/dirmap">https://github.com/H4ckForJob/dirmap</a></li>
 </ul>
-</li>
-</ul>
-<h2 id="工具简介"><a href="#工具简介" class="headerlink" title="工具简介"></a>工具简介</h2><p>在日志分析过程中每次看到Windows日志都比较头疼，这次发现了一个专门分析Windows日志的工具，做个记录。</p>
-<p> APT- hunter是一款针对窗口事件日志的威胁搜索工具，由紫色团队开发，用于检测隐藏在窗口事件日志海洋中的APT移动，以减少发现可疑活动的时间。此工具将充分利用收集的Windows事件日志，并确保不会错过配置为检测的关键事件。</p>
-<p>APT-Hunter使用python3构建，因此要使用该工具，需要安装所需的库</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">python3 <span class="token operator">-</span>m pip install <span class="token operator">-</span>r Requirements<span class="token punctuation">.</span>txt <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>下载工具后，先下载对应的python包，使用清华的pip源，此处使用python3</p>
+<pre class="line-numbers language-none"><code class="language-none">pip3 install -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple -r requirement.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h2 id="工具功能"><a href="#工具功能" class="headerlink" title="工具功能"></a>工具功能</h2><p>APT-Hunter有两个部分共同工作，帮助用户快速获得他想要的数据。这个工具将用于快速的windows日志分析。</p>
 <ul>
-<li>收集日志：用户可以手动收集Windows的 CSV 和 EVTX 格式的日志，或者使用工具给出的 powershell 脚本来自动提取所需的日志，后面我们详细讲解。</li>
-<li>可通过 APT-hunter 内置库分析CSV日志与EVTX日志<ul>
-<li>想看GUI需要上传到 <a target="_blank" rel="noopener" href="https://github.com/google/timesketch">timesketch</a> 进行分析</li>
+<li>关于以下文件的作用<ul>
+<li>data：扫描字典更新路径</li>
+<li>output：扫描的历史记录</li>
+<li><strong>dirmap.conf</strong>：配置文件（这个比较关键，通过修改文件参数，改变扫描方式，后面纤细说）</li>
 </ul>
 </li>
 </ul>
-<h3 id="Windows日志简述"><a href="#Windows日志简述" class="headerlink" title="Windows日志简述"></a>Windows日志简述</h3><ul>
-<li><p>APT-Hunter工具可分析的Windows系统日志，写道这里了，对Windows日志简单做个介绍</p>
-<ul>
-<li><p>Windows系统日志主要有三种（注意我们这里说的是系统日志）</p>
-<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724155906806.png"></p>
-<ul>
-<li>系统日志: System.evtx，操作系统自身组件产生的日志事件，比如驱动、系统组件和应用软件的崩溃以及数据丢失错误等</li>
-<li>应用程序日志: Application.evtx ，记录应用程序或系统程序运行方面的日志事件，比如数据库程序可以在应用程序日志中记录文件错误，应用的崩溃记录等</li>
-<li>安全日志: Security.evtx ，记录系统的安全审计日志事件，比如登录事件、对象访问、进程追踪、特权调用、帐号管理、策略变更等</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>APT-Hunter工具可分析以下Windows日志</p>
-<ul>
-<li><p>Sysmon：Windows与Linux系统上默认没有，这个日志记录工具需要安装</p>
-<ul>
-<li>安装时，可选择记录网络连接安装等，包括每个连接的源进程、IP 地址、端口号、主机名和端口名，记录注册表和文件的操作记录等信息<ul>
-<li>详细安装方式看此处：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36618918/article/details/123452710">https://blog.csdn.net/qq_36618918/article/details/123452710</a></li>
-</ul>
-</li>
-<li>Windows系统安装后在以下目录查看<code>应用程序和服务日志/Microsoft/Windows/Sysmon/Operational</code></li>
-</ul>
-<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724161426018.png"></p>
-<ul>
-<li>工具下载：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/sysinternals/downloads/sysmon">https://docs.microsoft.com/zh-cn/sysinternals/downloads/sysmon</a></li>
-</ul>
-</li>
-<li><p>Security：安全日志</p>
-</li>
-<li><p>System：系统日志</p>
-</li>
-<li><p>Powershell：PowerShell 操作的详细信息，例如启动和停止引擎和提供程序，以及执行 PowerShell 命令。</p>
-<ul>
-<li>日志查看位置<code>应用程序和服务日志/PowerShellCore/Operational</code>，默认不开启，需要手动开启，方式比较多：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_logging_windows?view=powershell-7.2">https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_logging_windows?view=powershell-7.2</a></li>
-<li>本地组策略-用户配置-管理模板-Windows Powershell<ul>
-<li>这里也包含了一部分关于Powershell的设置</li>
-</ul>
-</li>
-</ul>
-<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724164532778.png"></p>
-</li>
-<li><p>Powershell_Operational：记录有关 PowerShell 操作的详细信息，例如启动和停止引擎和提供程序，以及执行 PowerShell 命令</p>
-<ul>
-<li>查看日志位置<code>应用程序和服务日志-Microsoft-Windows-PowerShell-Operational</code></li>
-<li>与前面的Powershellcode一样，需要进行配置，配置方法类似，<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_logging?view=powershell-5.1">https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_logging?view=powershell-5.1</a></li>
-</ul>
-</li>
-<li><p>ScheduledTask：记录计划任务的启动、报错</p>
-<ul>
-<li>计划任务日志，注意和计划任务列表不同，默认不开启，启用方式如下图</li>
-</ul>
-<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724174516076.png"></p>
-<pre class="line-numbers language-none"><code class="language-none">代码 0 或 0x0： 操作成功完成。
-代码 1 或 0x1： 调用的函数不正确或调用了未知函数。
-代码 10 或 0xa： 环境不正确。
-代码 0x8009000f：常规访问被拒绝<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li><p>WinRM：属于window远程管理的一种方式，默认关闭需要手动开启，但日志位置在哪里还真没找到</p>
-<ul>
-<li>开启/关闭方法<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_23663693/article/details/121654390">https://blog.csdn.net/qq_23663693/article/details/121654390</a></li>
-</ul>
-</li>
-<li><p>TerminalServices：通俗的远程桌面，远程桌面日志Windows一般是在Windows日志的Security （安全）日志中</p>
-</li>
-<li><p>Windows_Defender：Windows自己的杀毒软件的日志记录</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="工具参数"><a href="#工具参数" class="headerlink" title="工具参数"></a>工具参数</h2><ul>
-<li>参数</li>
-</ul>
-<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell"><span class="token operator">/</span><span class="token operator">/</span>这里给出了基本的日志分析示例，后面举例说明
-usage: APT-Hunter<span class="token punctuation">.</span>py <span class="token punctuation">[</span><span class="token operator">-</span>h<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token operator">-</span>p PATH<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token operator">-</span>o OUT<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token operator">-</span>t <span class="token punctuation">&#123;</span>csv<span class="token punctuation">,</span>evtx<span class="token punctuation">&#125;</span><span class="token punctuation">]</span>
-                     <span class="token punctuation">[</span><span class="token operator">--</span>security SECURITY<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token operator">--</span>system SYSTEM<span class="token punctuation">]</span>
-                     <span class="token punctuation">[</span><span class="token operator">--</span>scheduledtask SCHEDULEDTASK<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token operator">--</span>defender DEFENDER<span class="token punctuation">]</span>
-                     <span class="token punctuation">[</span><span class="token operator">--</span>powershell POWERSHELL<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token operator">--</span>powershellop POWERSHELLOP<span class="token punctuation">]</span>
-                     <span class="token punctuation">[</span><span class="token operator">--</span>terminal TERMINAL<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token operator">--</span>winrm WINRM<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token operator">--</span>sysmon SYSMON<span class="token punctuation">]</span>
-<span class="token operator">/</span><span class="token operator">/</span>参数英文留着，英文好的可以就直接看
+<p><img src="/2022/08/11/dirmap-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/image-20220811171058861.png"></p>
+<h2 id="参数介绍"><a href="#参数介绍" class="headerlink" title="参数介绍"></a>参数介绍</h2><ul>
+<li><p>使用 -h 显示参数信息</p>
+<pre class="line-numbers language-none"><code class="language-none">python3 dirmap.py -h
+
+                     #####  # #####  #    #   ##   #####
+                     #    # # #    # ##  ##  #  #  #    #
+                     #    # # #    # # ## # #    # #    #
+                     #    # # #####  #    # ###### #####
+                     #    # # #   #  #    # #    # #
+                     #####  # #    # #    # #    # #   v1.0
+
+usage: python3 dirmap.py -i https:&#x2F;&#x2F;target.com -lcf
+
 optional arguments:
-  <span class="token operator">-</span>h<span class="token punctuation">,</span> <span class="token operator">--</span>help            show this help message and <span class="token keyword">exit</span>
-  						显示帮助信息并推出
-  <span class="token operator">-</span>p PATH<span class="token punctuation">,</span> <span class="token operator">--</span>path PATH  path to folder containing windows event logs generated
-                        by the powershell log collector
-                        通过powershell脚本获取到的日志路径，一般写绝对<span class="token operator">/</span>相对路径都可以，前提是再当前文件夹下，获取日志的文件名：wineventlog/
-  <span class="token operator">-</span>o OUT<span class="token punctuation">,</span> <span class="token operator">--</span>out OUT     output file name	输出文件名
-  <span class="token operator">-</span>t <span class="token punctuation">&#123;</span>csv<span class="token punctuation">,</span>evtx<span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token operator">--</span><span class="token function">type</span> <span class="token punctuation">&#123;</span>csv<span class="token punctuation">,</span>evtx<span class="token punctuation">&#125;</span>
-                        csv <span class="token punctuation">(</span> logs <span class="token keyword">from</span> <span class="token function">get-eventlog</span> or windows event log GUI
-                        or logs <span class="token keyword">from</span> <span class="token function">Get-WinEvent</span> <span class="token punctuation">)</span> <span class="token punctuation">,</span> evtx <span class="token punctuation">(</span> EVTX extension
-                        windows event log <span class="token punctuation">)</span>
-                        需要分析的日志的类型，powershel脚本两个脚本获取的日志类型为csv<span class="token punctuation">,</span>evtx，不同的日志类型文件使用哪一种
+  -h, --help            show this help message and exit
+Engine:
+  Engine config
+  -t THREAD_NUM, --thread THREAD_NUM
+                        num of threads, default 30	&#x2F;&#x2F;配置扫描线程，默认为30
+Target:
+  Target config
+  -i TARGET             scan a target or network (e.g. [http:&#x2F;&#x2F;]target.com , 192.168.1.1[&#x2F;24] ,
+                        192.168.1.1-192.168.1.100)	&#x2F;&#x2F;加入要扫描的目标，可以是URL也可以是IP地址段
+  -iF FILE              load targets from targetFile (e.g. urls.txt)	&#x2F;&#x2F;导入文件扫描
+Bruter:
+  Bruter config
+  -lcf, --loadConfigFile
+                        Load the configuration through the configuration file
+                        &#x2F;&#x2F;加载配置文件进行扫描，这里的配置文件可能是 dirmap.conf 文件
+  --debug               Print payloads and exit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<span class="token operator">/</span><span class="token operator">/</span>以下是单独分析某一种日志的参数
-  <span class="token operator">--</span>security SECURITY   Path to Security Logs
-  <span class="token operator">--</span>system SYSTEM       Path to System Logs
-  <span class="token operator">--</span>scheduledtask SCHEDULEDTASK
-                        Path to Scheduled Tasks Logs
-  <span class="token operator">--</span>defender DEFENDER   Path to Defender Logs
-  <span class="token operator">--</span>powershell POWERSHELL
-                        Path to Powershell Logs
-  <span class="token operator">--</span>powershellop POWERSHELLOP
-                        Path to Powershell Operational Logs
-  <span class="token operator">--</span>terminal TERMINAL   Path to TerminalServices LocalSessionManager Logs
-  <span class="token operator">--</span>winrm WINRM         Path to Winrm Logs
-  <span class="token operator">--</span>sysmon SYSMON       Path to Sysmon Logs<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2></li>
+<li><p>扫描配置文件 dirmap.conf 看官方介绍，就直接抄了，对于不懂的进行标注，工具文件都是英文看起来费劲</p>
+<ul>
+<li>配置文件比较细，基础功能点看–程序运行</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#递归扫描处理配置	-- 开启后扫描速度会比较慢</span>
+<span class="token punctuation">[</span>RecursiveScan<span class="token punctuation">]</span>
+<span class="token comment">#是否开启递归扫描:关闭:0;开启:1</span>
+conf<span class="token punctuation">.</span>recursive_scan <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token comment">#遇到这些状态码，开启递归扫描。默认配置[301,403]</span>
+conf<span class="token punctuation">.</span>recursive_status_code <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">301</span><span class="token punctuation">,</span><span class="token number">403</span><span class="token punctuation">]</span>
+<span class="token comment">#URL超过这个长度就退出扫描</span>
+conf<span class="token punctuation">.</span>recursive_scan_max_url_length <span class="token operator">=</span> <span class="token number">60</span>
+<span class="token comment">#这些后缀名不递归扫</span>
+conf<span class="token punctuation">.</span>recursive_blacklist_exts <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"html"</span><span class="token punctuation">,</span><span class="token string">'htm'</span><span class="token punctuation">,</span><span class="token string">'shtml'</span><span class="token punctuation">,</span><span class="token string">'png'</span><span class="token punctuation">,</span><span class="token string">'jpg'</span><span class="token punctuation">,</span><span class="token string">'webp'</span><span class="token punctuation">,</span><span class="token string">'bmp'</span><span class="token punctuation">,</span><span class="token string">'js'</span><span class="token punctuation">,</span><span class="token string">'css'</span><span class="token punctuation">,</span><span class="token string">'pdf'</span><span class="token punctuation">,</span><span class="token string">'ini'</span><span class="token punctuation">,</span><span class="token string">'mp3'</span><span class="token punctuation">,</span><span class="token string">'mp4'</span><span class="token punctuation">]</span>
+<span class="token comment">#设置排除扫描的目录。默认配置空。其他配置：e.g:['/test1','/test2']	--如果不是很确定，建议不要设置排除目录，信息收集要全面</span>
+<span class="token comment">#conf.exclude_subdirs = ['/test1','/test2']</span>
+conf<span class="token punctuation">.</span>exclude_subdirs <span class="token operator">=</span> <span class="token string">""</span>
 
-<h2 id="获取系统日志"><a href="#获取系统日志" class="headerlink" title="获取系统日志"></a>获取系统日志</h2><ul>
-<li>系统日志可以手动获取也可以通过工具自带的脚本获取<ul>
-<li>手动获取参照之前的Windows日志简述中的路径进行导出即可，没找到路径的还得靠各位师傅补充了</li>
-</ul>
-</li>
-</ul>
-<h3 id="自带脚本获取日志"><a href="#自带脚本获取日志" class="headerlink" title="自带脚本获取日志"></a>自带脚本获取日志</h3><ul>
-<li><p>使用工具自带的powershell脚本文件，运行脚本文件：<code>windows-log-collector-full-v3-CSV.ps1</code>与<code>windows-log-collector-full-v3-EVTX.ps1</code></p>
-</li>
-<li><p>运行脚本文件报错，那就解决报错</p>
-<ul>
-<li>解决的参考连接：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/jackadam/p/15704911.html">https://www.cnblogs.com/jackadam/p/15704911.html</a></li>
-</ul>
-<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724110626417.png"></p>
-</li>
-<li><p>输入命令：<code>get-executionpolicy</code>显示<code>Restricted</code>，<code>Restricted</code>表示：</p>
-<ul>
-<li>Windows 客户端计算机的默认执行策略</li>
-<li>允许单个命令，但不允许脚本</li>
-<li>阻止运行所有脚本文件，包括格式化和配置文件 () 、模块脚本文件 () 和 .ps1xml .psm1 PowerShell 配置文件 .ps1 ()</li>
-</ul>
-</li>
-</ul>
-<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724111756464.png"></p>
-<ul>
-<li>需要将<code>Restricted</code>改为<code>RemoteSigned</code>以管理员身份打开PowerShell 输入 <code>set-executionpolicy remotesigned</code>，选择Y，<code>RemoteSigned</code>表示：（后面几句没明白，但是脚本可以运行就可以）<ul>
-<li>Windows 服务器计算机的默认执行策略</li>
-<li>脚本可以运行</li>
-<li>需要受信任的发布者对从 Internet 下载的脚本和配置文件（包括电子邮件和即时消息程序）进行数字签名</li>
-<li>对于在本地计算机上编写且未从 Internet 下载的脚本，不需要数字签名</li>
-<li>如果脚本未受阻止（例如使用 cmdlet），则运行从 Internet 下载且 Unblock-File 未签名的脚本</li>
-<li>从 Internet 来源（而不是 Internet）运行未签名脚本的风险，以及可能是恶意的已签名脚本的风险。</li>
-</ul>
-</li>
-</ul>
-<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724112123442.png"></p>
-<ul>
-<li><p>以上报错解决，运行脚本，获取Windows系统的日志文件</p>
-<ul>
-<li>会在当前目录下创建wineventlog文件夹，将获取到的日志存在此文件夹下</li>
-<li>下面报错-红字部分，不用管，不存在此项日志就会报错</li>
-</ul>
-<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724112500380.png"></p>
-</li>
-<li><p>日志文件收集成功</p>
-<ul>
-<li>csv格式日志文件，使用脚本：<code>windows-log-collector-full-v3-CSV.ps1</code></li>
-</ul>
-<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724112703115.png"></p>
-<ul>
-<li><p>evtx格式日志文件，使用脚本<code>windows-log-collector-full-v3-EVTX.ps1</code></p>
-<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220724141515595.png" alt="image-20220724141515595"></p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="日志分析"><a href="#日志分析" class="headerlink" title="日志分析"></a>日志分析</h2><ul>
-<li><p>通过以上操作，获取到Windows的相关日志，开始使用命令进行分析</p>
-</li>
-<li><p>官网中给出了三个范例，在日常使用中这三个也就够用了，简单解释下：</p>
-<ul>
-<li>很好理解，全部分析与单独分析，其他单独分析的就不再说了</li>
-</ul>
-</li>
-</ul>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">//</span>使用APT<span class="token operator">-</span>Hunter<span class="token punctuation">.</span>py工具分析evtx文件日志，日志路径在<span class="token operator">/</span>opt<span class="token operator">/</span>wineventlogs<span class="token operator">/</span>，输出文件名为Project1
-	<span class="token operator">//</span>此处的文件名可任意定义
-<span class="token comment">#python3 APT-Hunter.py  -t evtx  -p /opt/wineventlogs/  -o Project1</span>
-<span class="token operator">//</span>与上一条相同，分析日志类型为csv
-<span class="token comment">#python3 APT-Hunter.py  -t csv  -p /opt/wineventlogs/  -o Project1</span>
-<span class="token operator">//</span>使用APT<span class="token operator">-</span>Hunter<span class="token punctuation">.</span>py工具分析evtx文件日志，单独分析security日志，日志路径在evtx<span class="token operator">/</span>security<span class="token punctuation">.</span>evtx，输出文件名为Project2
-<span class="token comment">#python3 APT-Hunter.py  -t evtx  --security evtx/security.evtx -o Project2</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">#扫描模式处理配置(4个模式，1次只能选择1个)	-- 如下图，当情绪运行后会显示当前使用的是哪种模式</span>
+<span class="token punctuation">[</span>ScanModeHandler<span class="token punctuation">]</span>
+<span class="token comment">#模式1 -- 字典模式:关闭:0;单字典:1;多字典:2</span>
+conf<span class="token punctuation">.</span>dict_mode <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token comment">#单字典模式的路径</span>
+conf<span class="token punctuation">.</span>dict_mode_load_single_dict <span class="token operator">=</span> <span class="token string">"dict_mode_dict.txt"</span>
+<span class="token comment">#多字典模式的路径，默认配置dictmult</span>
+conf<span class="token punctuation">.</span>dict_mode_load_mult_dict <span class="token operator">=</span> <span class="token string">"dictmult"</span>
+<span class="token comment">#模式2 -- 爆破模式:关闭:0;开启:1</span>
+conf<span class="token punctuation">.</span>blast_mode <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token comment">#生成字典最小长度。默认配置3</span>
+conf<span class="token punctuation">.</span>blast_mode_min <span class="token operator">=</span> <span class="token number">3</span>
+<span class="token comment">#生成字典最大长度。默认配置3</span>
+conf<span class="token punctuation">.</span>blast_mode_max <span class="token operator">=</span> <span class="token number">3</span>
+<span class="token comment">#默认字符集:a-z。暂未使用。</span>
+conf<span class="token punctuation">.</span>blast_mode_az <span class="token operator">=</span> <span class="token string">"abcdefghijklmnopqrstuvwxyz"</span>
+<span class="token comment">#默认字符集:0-9。暂未使用。</span>
+conf<span class="token punctuation">.</span>blast_mode_num <span class="token operator">=</span> <span class="token string">"0123456789"</span>
+<span class="token comment">#自定义字符集。默认配置"abc"。使用abc构造字典</span>
+conf<span class="token punctuation">.</span>blast_mode_custom_charset <span class="token operator">=</span> <span class="token string">"abc"</span>
+<span class="token comment">#自定义继续字符集。默认配置空。</span>
+conf<span class="token punctuation">.</span>blast_mode_resume_charset <span class="token operator">=</span> <span class="token string">""</span>
+<span class="token comment">#模式3 -- 爬虫模式:关闭:0;开启:1</span>
+conf<span class="token punctuation">.</span>crawl_mode <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token comment">#用于生成动态敏感文件payload的后缀字典</span>
+conf<span class="token punctuation">.</span>crawl_mode_dynamic_fuzz_suffix <span class="token operator">=</span> <span class="token string">"crawl_mode_suffix.txt"</span>
+<span class="token comment">#解析robots.txt文件。暂未实现。</span>
+conf<span class="token punctuation">.</span>crawl_mode_parse_robots <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token comment">#解析html页面的xpath表达式</span>
+conf<span class="token punctuation">.</span>crawl_mode_parse_html <span class="token operator">=</span> <span class="token string">"//*/@href | //*/@src | //form/@action"</span>
+<span class="token comment">#是否进行动态爬虫字典生成。默认配置1，开启爬虫动态字典生成。其他配置：e.g:关闭:0;开启:1		-- 说是生成字典，但是没看到？？</span>
+conf<span class="token punctuation">.</span>crawl_mode_dynamic_fuzz <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token comment">#模式4 -- Fuzz模式:关闭:0;单字典:1;多字典:2</span>
+conf<span class="token punctuation">.</span>fuzz_mode <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token comment">#单字典模式的路径。</span>
+conf<span class="token punctuation">.</span>fuzz_mode_load_single_dict <span class="token operator">=</span> <span class="token string">"fuzz_mode_dir.txt"</span>
+<span class="token comment">#多字典模式的路径。默认配置:fuzzmult</span>
+conf<span class="token punctuation">.</span>fuzz_mode_load_mult_dict <span class="token operator">=</span> <span class="token string">"fuzzmult"</span>
+<span class="token comment">#设置fuzz标签。默认配置&#123;dir&#125;。使用&#123;dir&#125;标签当成字典插入点，将http://target.com/&#123;dir&#125;.php替换成http://target.com/字典中的每一行.php。其他配置：e.g:&#123;dir&#125;;&#123;ext&#125;</span>
+<span class="token comment">#conf.fuzz_mode_label = "&#123;ext&#125;"</span>
+conf<span class="token punctuation">.</span>fuzz_mode_label <span class="token operator">=</span> <span class="token string">"&#123;dir&#125;"</span>
 
-<ul>
-<li>将所有日志进行分析后会生成两个文件</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">111_Report.xlsx：此excel工作表将包括从提供给APT-Hunter的每个Windows日志中检测到的所有事件
-111_TimeSketch.csv：您可以将此CSV文件上传到timeketch，以便进行时间轴分析，以帮助您了解攻击的全貌,以GUI的方式显示<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<span class="token comment">#处理payload配置。暂未实现。</span>
+<span class="token punctuation">[</span>PayloadHandler<span class="token punctuation">]</span>
 
-<p><img src="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20220725123610965.png"></p>
-<ul>
-<li>这里涉及到一个工具<code>timeketch</code>，这又是另一篇内容，工具的安装请移步另一篇文章</li>
+<span class="token comment">#处理请求配置		-- 对请求头进行修改，可自带cookie等</span>
+<span class="token punctuation">[</span>RequestHandler<span class="token punctuation">]</span>
+<span class="token comment">#自定义请求头。默认配置空。其他配置：e.g:test1=test1,test2=test2</span>
+<span class="token comment">#conf.request_headers = "test1=test1,test2=test2"</span>
+conf<span class="token punctuation">.</span>request_headers <span class="token operator">=</span> <span class="token string">""</span>
+<span class="token comment">#自定义请求User-Agent。默认配置chrome的ua。</span>
+conf<span class="token punctuation">.</span>request_header_ua <span class="token operator">=</span> <span class="token string">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"</span>
+<span class="token comment">#自定义请求cookie。默认配置空，不设置cookie。其他配置e.g:cookie1=cookie1; cookie2=cookie2;		--可自定义cookie 进行扫描</span>
+<span class="token comment">#conf.request_header_cookie = "cookie1=cookie1; cookie2=cookie2"</span>
+conf<span class="token punctuation">.</span>request_header_cookie <span class="token operator">=</span> <span class="token string">""</span>
+<span class="token comment">#自定义401认证。暂未实现。因为自定义请求头功能可满足该需求(懒XD)</span>
+conf<span class="token punctuation">.</span>request_header_401_auth <span class="token operator">=</span> <span class="token string">""</span>
+<span class="token comment">#自定义请求方法。默认配置get方法。其他配置：e.g:get;head</span>
+<span class="token comment">#conf.request_method = "head"</span>
+conf<span class="token punctuation">.</span>request_method <span class="token operator">=</span> <span class="token string">"get"</span>
+<span class="token comment">#自定义每个请求超时时间。默认配置3秒。</span>
+conf<span class="token punctuation">.</span>request_timeout <span class="token operator">=</span> <span class="token number">3</span>
+<span class="token comment">#随机延迟(0-x)秒发送请求。参数必须是整数。默认配置0秒，无延迟。</span>
+conf<span class="token punctuation">.</span>request_delay <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token comment">#自定义单个目标，请求协程线程数。默认配置30线程</span>
+conf<span class="token punctuation">.</span>request_limit <span class="token operator">=</span> <span class="token number">30</span>
+<span class="token comment">#自定义最大重试次数。暂未实现。</span>
+conf<span class="token punctuation">.</span>request_max_retries <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token comment">#设置持久连接。是否使用session()。暂未实现。</span>
+conf<span class="token punctuation">.</span>request_persistent_connect <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token comment">#302重定向。默认False，不重定向。其他配置：e.g:True;False</span>
+conf<span class="token punctuation">.</span>redirection_302 <span class="token operator">=</span> <span class="token boolean">False</span>
+<span class="token comment">#payload后添加后缀。默认空，扫描时，不添加后缀。其他配置：e.g:txt;php;asp;jsp</span>
+<span class="token comment">#conf.file_extension = "txt"</span>
+conf<span class="token punctuation">.</span>file_extension <span class="token operator">=</span> <span class="token string">""</span>
+
+<span class="token comment">#处理响应配置</span>
+<span class="token punctuation">[</span>ResponseHandler<span class="token punctuation">]</span>
+<span class="token comment">#设置要记录的响应状态。默认配置[200]，记录200状态码。其他配置：e.g:[200,403,301]</span>
+<span class="token comment">#conf.response_status_code = [200,403,301]</span>
+conf<span class="token punctuation">.</span>response_status_code <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">403</span><span class="token punctuation">,</span><span class="token number">301</span><span class="token punctuation">]</span>
+<span class="token comment">#是否记录content-type响应头。默认配置1记录</span>
+<span class="token comment">#conf.response_header_content_type = 0</span>
+conf<span class="token punctuation">.</span>response_header_content_type <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token comment">#是否记录页面大小。默认配置1记录</span>
+<span class="token comment">#conf.response_size = 0</span>
+conf<span class="token punctuation">.</span>response_size <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token comment">#是否自动检测404页面。默认配置True，开启自动检测404.其他配置参考e.g:True;False</span>
+<span class="token comment">#conf.auto_check_404_page = False</span>
+conf<span class="token punctuation">.</span>auto_check_404_page <span class="token operator">=</span> <span class="token boolean">True</span>
+<span class="token comment">#自定义匹配503页面正则。暂未实现。感觉用不着，可能要废弃。</span>
+<span class="token comment">#conf.custom_503_page = "page 503"</span>
+conf<span class="token punctuation">.</span>custom_503_page <span class="token operator">=</span> <span class="token string">""</span>
+<span class="token comment">#自定义正则表达式，匹配页面内容</span>
+<span class="token comment">#conf.custom_response_page = "([0-9])&#123;3&#125;([a-z])&#123;3&#125;test"</span>
+conf<span class="token punctuation">.</span>custom_response_page <span class="token operator">=</span> <span class="token string">""</span>
+<span class="token comment">#跳过显示页面大小为x的页面，若不设置，请配置成"None"，默认配置“None”。其他大小配置参考e.g:None;0b;1k;1m</span>
+<span class="token comment">#conf.skip_size = "0b"</span>
+conf<span class="token punctuation">.</span>skip_size <span class="token operator">=</span> <span class="token string">"None"</span>
+
+<span class="token comment">#代理选项</span>
+<span class="token punctuation">[</span>ProxyHandler<span class="token punctuation">]</span>
+<span class="token comment">#代理配置。默认设置“None”，不开启代理。其他配置e.g:&#123;"http":"http://127.0.0.1:8080","https":"https://127.0.0.1:8080"&#125;</span>
+<span class="token comment">#conf.proxy_server = &#123;"http":"http://127.0.0.1:8080","https":"https://127.0.0.1:8080"&#125;</span>
+conf<span class="token punctuation">.</span>proxy_server <span class="token operator">=</span> <span class="token boolean">None</span>
+
+<span class="token comment">#Debug选项</span>
+<span class="token punctuation">[</span>DebugMode<span class="token punctuation">]</span>
+<span class="token comment">#打印payloads并退出</span>
+conf<span class="token punctuation">.</span>debug <span class="token operator">=</span> <span class="token number">0</span>
+
+<span class="token comment">#update选项</span>
+<span class="token punctuation">[</span>CheckUpdate<span class="token punctuation">]</span>
+<span class="token comment">#github获取更新。暂未实现。</span>
+conf<span class="token punctuation">.</span>update <span class="token operator">=</span> <span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
-<p><strong>难受了，安装timeketch工具报错，未安装完成，等报错解决了再不齐剩下的内容</strong></p>
+<h2 id="程序运行"><a href="#程序运行" class="headerlink" title="程序运行"></a>程序运行</h2><p>通过配置文件 dirmap.conf 修改完成目录扫描</p>
+<ul>
+<li><p>递归扫描模式开启后速度会稍微有点慢</p>
+</li>
+<li><p>扫描模式共四种，只能选择 1 种：</p>
+<ul>
+<li>字典模式：可选单字典与多字典，字典扫描成功率还是取决于字典的强度</li>
+<li>爆破模式：目前还有待改进，不完善，自定义字符集也不能用（能爆破的字符集只有 abc 三项）</li>
+<li>爬虫模式：可正常使用，参数中生成字典，但未找到对应路径？？</li>
+<li>Fuzz模式：支持单字典和多字典，爆破的URL：<a target="_blank" rel="noopener" href="http://target.com/%7Bdir%7D.php%EF%BC%8C%E9%9C%80%E8%A6%81%E5%86%8D%E5%90%8E%E9%9D%A2%E6%B7%BB%E5%8A%A0">http://target.com/{dir}.php，需要再后面添加</a>  {dir} 标签</li>
+</ul>
+</li>
+<li><p>可配合递归扫描进行，在程序运行时会显示对应选用的扫描方式</p>
+<p><img src="/2022/08/11/dirmap-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/image-20220812092237917.png"></p>
+</li>
+<li><p>处理请求配置</p>
+<ul>
+<li>对于请求头进行自定义设置</li>
+<li>可设置 cookie 进行扫描</li>
+<li>默认使用 get 方式，可自定义修改</li>
+</ul>
+</li>
+</ul>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
+<li>目录扫描工具还是要依靠强大的字典进行，虽然该工具提供了 Fuzz 扫描方式，但感觉还是字典或者自定义字典很重要<ul>
+<li>工具功能齐全，但字典还需要各位自行更新，太老的目录字典还是无法获取有价值的资产</li>
+</ul>
+</li>
+</ul>
+<p><strong>就到这里了，有错误后面再改</strong></p>
 
                 
             </div>
@@ -667,7 +667,7 @@ optional arguments:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jintianyouyu.github.io/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/">https://jintianyouyu.github.io/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/</a>
+                    <a href="https://jintianyouyu.github.io/2022/08/11/dirmap-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/">https://jintianyouyu.github.io/2022/08/11/dirmap-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -751,17 +751,18 @@ optional arguments:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/07/26/timeketch-%E5%8D%8F%E4%BD%9C%E5%8F%96%E8%AF%81%E6%97%B6%E9%97%B4%E8%BD%B4%E5%88%86%E6%9E%90/">
+                <a href="/2022/08/11/dirmap-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="timeketch-协作取证时间轴分析（未完待续...)">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="dirmap-目录扫描工具">
                         
-                        <span class="card-title">timeketch-协作取证时间轴分析（未完待续...)</span>
+                        <span class="card-title">dirmap-目录扫描工具</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -771,21 +772,22 @@ optional arguments:
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-07-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/" class="post-category">
-                                    日志分析
+                            <a href="/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F/" class="post-category">
+                                    信息收集-目录扫描
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -804,13 +806,13 @@ optional arguments:
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/">
+                <a href="/2022/07/30/%E9%81%93-%E6%B3%95-%E6%9C%AF-%E5%99%A8-%E5%8A%BF-%E5%BF%97/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="yakit-单兵作战武器库">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="道-法-术-器-势-志">
                         
-                        <span class="card-title">yakit-单兵作战武器库</span>
+                        <span class="card-title">道-法-术-器-势-志</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -821,15 +823,11 @@ optional arguments:
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-30
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    信息收集自动化工具
-                                </a>
+                            <i class="fas fa-user fa-fw"></i>
                             
                             
                         </span>
@@ -838,8 +836,8 @@ optional arguments:
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%99%A8%E5%AD%97%E7%AF%87/">
-                        <span class="chip bg-color">器字篇</span>
+                    <a href="/tags/%E8%B5%B7%E5%A7%8B%E7%AF%87/">
+                        <span class="chip bg-color">起始篇</span>
                     </a>
                     
                 </div>
