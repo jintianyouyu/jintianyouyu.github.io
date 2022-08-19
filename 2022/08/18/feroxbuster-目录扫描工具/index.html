@@ -4,14 +4,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="yakit-单兵作战武器库, 今天有雨">
+    <meta name="keywords" content="feroxbuster-目录扫描工具, 今天有雨">
     <meta name="description" content="
-站在前人的肩膀上，先给出官方链接：https://github.com/yaklang/yakit
+工具下载地址：https://github.com/epi052/feroxbuster
 
-前言
-写在最前面，技术小白刚入门，不敢过多评价，简单记录工具使用的体验，在使用重有个指导与参考，如有不对的海涵
+工具介绍
+目录扫描工具，目录字典需要用自己的，使用 -w 参数手动指定。
+至于说的速度快、很好用之类的，还没实战测试
 
-工具刚刚起步，内部还是">
+参数介绍x86_64-wi">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -25,7 +26,7 @@
 
     
 
-    <title>yakit-单兵作战武器库 | 今天有雨</title>
+    <title>feroxbuster-目录扫描工具 | 今天有雨</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -252,12 +253,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">yakit-单兵作战武器库</h1>
+                    <h1 class="description center-align post-title">feroxbuster-目录扫描工具</h1>
                 </div>
             </div>
         </div>
@@ -385,8 +386,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/" class="post-category">
-                                信息收集自动化工具
+                            <a href="/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F/" class="post-category">
+                                信息收集-目录扫描
                             </a>
                         
                     </div>
@@ -398,7 +399,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-07-22
+                    2022-08-18
                 </div>
                 
 
@@ -407,7 +408,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    2.2k
                 </div>
                 
 
@@ -433,310 +434,181 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <ul>
-<li>站在前人的肩膀上，先给出官方链接：<a target="_blank" rel="noopener" href="https://github.com/yaklang/yakit">https://github.com/yaklang/yakit</a></li>
+<li>工具下载地址：<a target="_blank" rel="noopener" href="https://github.com/epi052/feroxbuster">https://github.com/epi052/feroxbuster</a></li>
 </ul>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
-<li><p>写在最前面，技术小白刚入门，不敢过多评价，简单记录工具使用的体验，在使用重有个指导与参考，如有不对的海涵</p>
+<h2 id="工具介绍"><a href="#工具介绍" class="headerlink" title="工具介绍"></a>工具介绍</h2><ul>
+<li>目录扫描工具，目录字典需要用自己的，使用 -w 参数手动指定。</li>
+<li>至于说的速度快、很好用之类的，还没实战测试</li>
+</ul>
+<h2 id="参数介绍"><a href="#参数介绍" class="headerlink" title="参数介绍"></a>参数介绍</h2><pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">x86_64-windows-feroxbuster>feroxbuster<span class="token punctuation">.</span>exe <span class="token operator">-</span>h
+feroxbuster 2<span class="token punctuation">.</span>7<span class="token punctuation">.</span>1
+Ben <span class="token string">'epi'</span> Risher <span class="token punctuation">(</span>@epi052<span class="token punctuation">)</span>
+A fast<span class="token punctuation">,</span> simple<span class="token punctuation">,</span> recursive content discovery tool<span class="token punctuation">.</span>
+
+USAGE:
+    feroxbuster <span class="token namespace">[OPTIONS]</span>
+
+OPTIONS:
+    <span class="token operator">-</span>h<span class="token punctuation">,</span> <span class="token operator">--</span>help       Print help information
+    <span class="token operator">-</span>V<span class="token punctuation">,</span> <span class="token operator">--</span>version    Print version information
+
+Target selection:	<span class="token operator">/</span><span class="token operator">/</span>扫描目标选择：三种方式 
+        <span class="token operator">--</span><span class="token function">resume-from</span> &lt;STATE_FILE>    State file <span class="token keyword">from</span> which to resume a partially complete scan <span class="token punctuation">(</span>ex<span class="token punctuation">.</span> <span class="token operator">--</span><span class="token function">resume-from</span> ferox-1606586780<span class="token punctuation">.</span>state<span class="token punctuation">)</span>	<span class="token operator">/</span><span class="token operator">/</span>扫描到一般保存的扫描日志文件（查看Output settings参数部分你会明白）
+        <span class="token operator">--</span>stdin                       Read url<span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token keyword">from</span> STDIN	<span class="token operator">/</span><span class="token operator">/</span>stdin标准输入（键盘输入到缓冲区中的内容）<span class="token operator">--</span>不知道怎么用
+    <span class="token operator">-</span>u<span class="token punctuation">,</span> <span class="token operator">--</span>url &lt;URL>                   The target URL <span class="token punctuation">(</span>required<span class="token punctuation">,</span> unless <span class="token punctuation">[</span><span class="token operator">--</span>stdin <span class="token punctuation">|</span><span class="token punctuation">|</span> <span class="token operator">--</span><span class="token function">resume-from</span><span class="token punctuation">]</span> used<span class="token punctuation">)</span>	<span class="token operator">/</span><span class="token operator">/</span>常规用法，如果不使用前两种方式，此参数必须有
+
+Composite settings:	<span class="token operator">/</span><span class="token operator">/</span>没懂，不会用
+        <span class="token operator">--</span>burp           <span class="token function">Set</span> <span class="token operator">--</span>proxy to http:<span class="token operator">/</span><span class="token operator">/</span>127<span class="token punctuation">.</span>0<span class="token punctuation">.</span>0<span class="token punctuation">.</span>1:8080 and <span class="token function">set</span> <span class="token operator">--</span>insecure to true
+        <span class="token operator">--</span>burp-replay    <span class="token function">Set</span> <span class="token operator">--</span>replay-proxy to http:<span class="token operator">/</span><span class="token operator">/</span>127<span class="token punctuation">.</span>0<span class="token punctuation">.</span>0<span class="token punctuation">.</span>1:8080 and <span class="token function">set</span> <span class="token operator">--</span>insecure to true
+        <span class="token operator">--</span>smart          <span class="token function">Set</span> <span class="token operator">--</span>extract-links<span class="token punctuation">,</span> <span class="token operator">--</span>auto-tune<span class="token punctuation">,</span> <span class="token operator">--</span>collect-words<span class="token punctuation">,</span> and <span class="token operator">--</span>collect-backups to true
+        <span class="token operator">--</span>thorough       Use the same settings as <span class="token operator">--</span>smart and <span class="token function">set</span> <span class="token operator">--</span>collect-extensions to true
+
+Proxy settings:	<span class="token operator">/</span><span class="token operator">/</span>配置代理
+    <span class="token operator">-</span>p<span class="token punctuation">,</span> <span class="token operator">--</span>proxy &lt;PROXY>                    Proxy to use <span class="token keyword">for</span> requests <span class="token punctuation">(</span>ex: http<span class="token punctuation">(</span>s<span class="token punctuation">)</span>:<span class="token operator">/</span><span class="token operator">/</span>host:port<span class="token punctuation">,</span> socks5<span class="token punctuation">(</span>h<span class="token punctuation">)</span>:<span class="token operator">/</span><span class="token operator">/</span>host:port<span class="token punctuation">)</span>	<span class="token operator">/</span><span class="token operator">/</span>设置代理
+    <span class="token operator">-</span>P<span class="token punctuation">,</span> <span class="token operator">--</span>replay-proxy &lt;REPLAY_PROXY>      Send only unfiltered requests through a Replay Proxy<span class="token punctuation">,</span> instead of all requests	<span class="token operator">/</span><span class="token operator">/</span>只通过Replay Proxy发送未过滤的请求，而不是所有的请求
+    <span class="token operator">-</span>R<span class="token punctuation">,</span> <span class="token operator">--</span>replay-codes &lt;REPLAY_CODE><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>    Status Codes to send through a Replay Proxy when found <span class="token punctuation">(</span>default: <span class="token operator">--</span>status-codes value<span class="token punctuation">)</span>	<span class="token operator">/</span><span class="token operator">/</span>通过重放代理发送的状态码<span class="token punctuation">(</span>默认值:<span class="token operator">--</span>status-codes<span class="token punctuation">)</span>
+
+Request settings:	<span class="token operator">/</span><span class="token operator">/</span>请求设置
+    <span class="token operator">-</span>a<span class="token punctuation">,</span> <span class="token operator">--</span>user-agent &lt;USER_AGENT>           Sets the User-Agent <span class="token punctuation">(</span>default: feroxbuster/2<span class="token punctuation">.</span>7<span class="token punctuation">.</span>1<span class="token punctuation">)</span>	<span class="token operator">/</span><span class="token operator">/</span>设置用户代理<span class="token punctuation">(</span>默认:feroxbuster/2<span class="token punctuation">.</span>7<span class="token punctuation">.</span>1<span class="token punctuation">)</span>
+    <span class="token operator">-</span>A<span class="token punctuation">,</span> <span class="token operator">--</span>random-agent                      Use a random User-Agent	<span class="token operator">/</span><span class="token operator">/</span>使用随机的user-agent
+    <span class="token operator">-</span>b<span class="token punctuation">,</span> <span class="token operator">--</span>cookies &lt;COOKIE><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>               Specify HTTP cookies to be used in each request <span class="token punctuation">(</span>ex: <span class="token operator">-</span>b stuff=things<span class="token punctuation">)</span>	<span class="token operator">/</span><span class="token operator">/</span>添加网站的cookie进行扫描
+        <span class="token operator">--</span><span class="token keyword">data</span> &lt;<span class="token keyword">DATA</span>>                       Request<span class="token string">'s Body; can read data from a file if input starts with an @ (ex: @post.bin)
+    -f, --add-slash                         Append / to each request'</span>s URL	<span class="token operator">/</span><span class="token operator">/</span>对请求设置后使用此参数添加到每个请求中（自己理解）
+    <span class="token operator">-</span>H<span class="token punctuation">,</span> <span class="token operator">--</span>headers &lt;HEADER><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>               Specify HTTP headers to be used in each request <span class="token punctuation">(</span>ex: <span class="token operator">-</span>H Header:val <span class="token operator">-</span>H <span class="token string">'stuff: things'</span><span class="token punctuation">)</span>	<span class="token operator">/</span><span class="token operator">/</span>可自定义在每个请求头中添加HTTP头
+    <span class="token operator">-</span>m<span class="token punctuation">,</span> <span class="token operator">--</span>methods &lt;HTTP_METHODS><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>         Which HTTP request method<span class="token punctuation">(</span>s<span class="token punctuation">)</span> should be sent <span class="token punctuation">(</span>default: GET<span class="token punctuation">)</span>	<span class="token operator">/</span><span class="token operator">/</span>设置发送的HTTP请求方法：GET（默认），可自行指定
+    <span class="token operator">-</span>Q<span class="token punctuation">,</span> <span class="token operator">--</span>query &lt;QUERY><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>                  Request<span class="token string">'s URL query parameters (ex: -Q token=stuff -Q secret=key)	//查询
+    -x, --extensions &lt;FILE_EXTENSION>...    File extension(s) to search for (ex: -x php -x pdf js)	//添加需要搜索的文件扩展名
+
+Request filters:	//过滤扫描
+        --dont-scan &lt;URL>...    URL(s) or Regex Pattern(s) to exclude from recursion/scans	//排除不扫描/递归扫描的URL
+
+Response filters:	//响应过滤器
+    -C, --filter-status &lt;STATUS_CODE>...          Filter out status codes (deny list) (ex: -C 200 -C 401)	//过滤掉对应的响应代码
+        --filter-similar-to &lt;UNWANTED_PAGE>...    Filter out pages that are similar to the given page (ex. --filter-similar-to http://site.xyz/soft404)	//过滤掉与给定页面类似的页面
+    -N, --filter-lines &lt;LINES>...                 Filter out messages of a particular line count (ex: -N 20 -N 31,30)	//过滤掉特定行数的消息（未测试）
+    -s, --status-codes &lt;STATUS_CODE>...           Status Codes to include (allow list) (default: 200 204 301 302 307 308 401 403 405)	//允许显示状态码过滤
+    -S, --filter-size &lt;SIZE>...                   Filter out messages of a particular size (ex: -S 5120 -S 4927,1970)	//过滤掉特定大小的消息
+    -W, --filter-words &lt;WORDS>...                 Filter out messages of a particular word count (ex: -W 312 -W 91,82)	//过滤掉特定字数的消息(未测试)
+    -X, --filter-regex &lt;REGEX>...                 Filter out messages via regular expression matching on the response'</span>s body <span class="token punctuation">(</span>ex: <span class="token operator">-</span>X <span class="token string">'^ignore me$'</span><span class="token punctuation">)</span>	<span class="token operator">/</span><span class="token operator">/</span>通过在响应体上匹配正则表达式过滤掉消息<span class="token punctuation">(</span>未测试<span class="token punctuation">)</span>
+
+Client settings:
+    <span class="token operator">-</span>k<span class="token punctuation">,</span> <span class="token operator">--</span>insecure             Disables TLS certificate validation in the client	<span class="token operator">/</span><span class="token operator">/</span>在客户端禁用TLS证书验证
+    <span class="token operator">-</span>r<span class="token punctuation">,</span> <span class="token operator">--</span>redirects            Allow client to follow redirects	<span class="token operator">/</span><span class="token operator">/</span>允许客户端遵循重定向
+    <span class="token operator">-</span>T<span class="token punctuation">,</span> <span class="token operator">--</span>timeout &lt;SECONDS>    Number of seconds before a client<span class="token string">'s request times out (default: 7)	//客户端请求超时前的秒数(默认值:7)
+
+Scan settings:	//扫描设置
+        --auto-bail                    Automatically stop scanning when an excessive amount of errors are encountered	//遇到过多错误时停止扫描
+        --auto-tune                    Automatically lower scan rate when an excessive amount of errors are encountered	//当遇到过多的错误时，自动降低扫描速率
+    -d, --depth &lt;RECURSION_DEPTH>      Maximum recursion depth, a depth of 0 is infinite recursion (default: 4)	//最大递归深度，默认为4，如果设置为0则无限递归
+    -D, --dont-filter                  Don'</span>t auto-<span class="token keyword">filter</span> wildcard responses
+    <span class="token operator">-</span>e<span class="token punctuation">,</span> <span class="token operator">--</span>extract-links                Extract links <span class="token keyword">from</span> response body <span class="token punctuation">(</span>html<span class="token punctuation">,</span> javascript<span class="token punctuation">,</span> etc<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">;</span> make new requests based on findings
+        <span class="token operator">--</span>force-recursion              Force recursion attempts on all <span class="token string">'found'</span> endpoints <span class="token punctuation">(</span>still respects recursion depth<span class="token punctuation">)</span>
+    <span class="token operator">-</span>L<span class="token punctuation">,</span> <span class="token operator">--</span>scan-limit &lt;SCAN_LIMIT>      Limit total number of concurrent scans <span class="token punctuation">(</span>default: 0<span class="token punctuation">,</span> i<span class="token punctuation">.</span>e<span class="token punctuation">.</span> no limit<span class="token punctuation">)</span>	<span class="token operator">/</span><span class="token operator">/</span>限制并发扫描的总数<span class="token punctuation">(</span>默认为0，即不限制<span class="token punctuation">)</span>
+    <span class="token operator">-</span>n<span class="token punctuation">,</span> <span class="token operator">--</span>no-recursion                 <span class="token keyword">Do</span> not scan recursively	<span class="token operator">/</span><span class="token operator">/</span>不进行递归扫描
+        <span class="token operator">--</span><span class="token keyword">parallel</span> &lt;PARALLEL_SCANS>    Run <span class="token keyword">parallel</span> feroxbuster instances <span class="token punctuation">(</span>one child <span class="token keyword">process</span> per url passed via stdin<span class="token punctuation">)</span>	<span class="token operator">/</span><span class="token operator">/</span>（高端用法，用到再说）
+        <span class="token operator">--</span>rate-limit &lt;RATE_LIMIT>      Limit number of requests per second <span class="token punctuation">(</span>per directory<span class="token punctuation">)</span> <span class="token punctuation">(</span>default: 0<span class="token punctuation">,</span> i<span class="token punctuation">.</span>e<span class="token punctuation">.</span> no limit<span class="token punctuation">)</span>	<span class="token operator">/</span><span class="token operator">/</span>限制每秒请求数<span class="token punctuation">(</span>每个目录<span class="token punctuation">)</span><span class="token punctuation">(</span>默认:0，即不限制<span class="token punctuation">)</span>
+    <span class="token operator">-</span>t<span class="token punctuation">,</span> <span class="token operator">--</span>threads &lt;THREADS>            Number of concurrent threads <span class="token punctuation">(</span>default: 50<span class="token punctuation">)</span>	<span class="token operator">/</span><span class="token operator">/</span>线程数设置，默认为50
+        <span class="token operator">--</span>time-limit &lt;TIME_SPEC>       Limit total run time of all scans <span class="token punctuation">(</span>ex: <span class="token operator">--</span>time-limit 10m<span class="token punctuation">)</span>	<span class="token operator">/</span><span class="token operator">/</span>限制所有扫描的总运行时间，如：可设置只扫10分钟
+    <span class="token operator">-</span>w<span class="token punctuation">,</span> <span class="token operator">--</span>wordlist &lt;FILE>              Path to the wordlist	<span class="token operator">/</span><span class="token operator">/</span>扫描字典路径
+
+Dynamic collection settings:
+    <span class="token operator">-</span>B<span class="token punctuation">,</span> <span class="token operator">--</span>collect-backups                     Automatically request likely backup extensions <span class="token keyword">for</span> <span class="token string">"found"</span> urls
+    <span class="token operator">-</span>E<span class="token punctuation">,</span> <span class="token operator">--</span>collect-extensions                  Automatically discover extensions and add them to <span class="token operator">--</span>extensions <span class="token punctuation">(</span>unless they<span class="token string">'re in --dont-collect)
+    -g, --collect-words                       Automatically discover important words from within responses and add them to the wordlist
+    -I, --dont-collect &lt;FILE_EXTENSION>...    File extension(s) to Ignore while collecting extensions (only used with --collect-extensions)
+
+Output settings:	//输出设置
+        --debug-log &lt;FILE>    Output file to write log entries (use w/ --json for JSON entries)
+        --json                Emit JSON logs to --output and --debug-log instead of normal text
+        --no-state            Disable state output file (*.state)	//禁用状态输出文件(*.state)
+    -o, --output &lt;FILE>       Output file to write results to (use w/ --json for JSON entries)	//将结果写入文件
+    -q, --quiet               Hide progress bars and banner (good for tmux windows w/ notifications)	//隐藏扫描进度条（没有这个看着挺难受）
+        --silent              Only print URLs + turn off logging (good for piping a list of urls to other commands)	//只打印url +关闭日志记录(还是看着难受)
+    -v, --verbosity           Increase verbosity level (use -vv or more for greater effect. [CAUTION] 4 -v'</span>s is probably too much<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="工具使用"><a href="#工具使用" class="headerlink" title="工具使用"></a>工具使用</h2><ul>
+<li><p>工具的运行，使用 -u 参数，默认使用以下标注的功能，与 dirmap 工具最开始的显示相同，添加功能参数，此处会列出来对应使用的参数功能</p>
+<p><img src="/2022/08/18/feroxbuster-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/image-20220819223327926.png"></p>
+</li>
+</ul>
+<h3 id="Request-settings：请求设置"><a href="#Request-settings：请求设置" class="headerlink" title="Request settings：请求设置"></a>Request settings：请求设置</h3><ul>
+<li><p>-A：使用随机的user-agent</p>
 <ul>
-<li><p>工具刚刚起步，内部还是有些小问题，如扫描记录显示不全</p>
+<li>程序自动随机修改user-agent，进行反爬绕过</li>
+<li>以上图相比 user-agent 由默认变成了随机（Random)</li>
+</ul>
+<p><img src="/2022/08/18/feroxbuster-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/image-20220819201221332.png"></p>
 </li>
-<li><p>各个模块之间的协同能力欠缺，或者说被动扫描欠缺，需要手动去操作，半自动或者自动化检测能力需要提高</p>
-<p>《就这些》</p>
+<li><p>-f：对“请求设置”后，如修改的user-agent等参数，可使用此参数添加到每个请求中</p>
+<p><img src="/2022/08/18/feroxbuster-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/image-20220819223706553.png"></p>
+</li>
+<li><p>-m：设置发送的HTTP请求方法：GET（默认），可自行指定</p>
+<p><img src="/2022/08/18/feroxbuster-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/image-20220819223814244.png"></p>
+</li>
+<li><p>-x：指定要搜索的文件扩展名</p>
+<p><img src="/2022/08/18/feroxbuster-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/image-20220819224049171.png"></p>
 </li>
 </ul>
+<h3 id="Request-filters：过滤扫描"><a href="#Request-filters：过滤扫描" class="headerlink" title="Request filters：过滤扫描"></a>Request filters：过滤扫描</h3><ul>
+<li><p>–dont-scan：排除不扫描/递归扫描的URL</p>
+<p><img src="/2022/08/18/feroxbuster-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/image-20220819225038904.png"></p>
 </li>
-<li><p>这个工具官方给出的指导手册与安装方式相当详细，这里也不用再多赘述，大家按照流程正常安装使用即可。</p>
+</ul>
+<h3 id="Response-filters：响应过滤器"><a href="#Response-filters：响应过滤器" class="headerlink" title="Response filters：响应过滤器"></a>Response filters：响应过滤器</h3><ul>
+<li>-C：过滤掉对应的响应代码，对于不必要显示的响应代码都进行过滤，<strong>此参数不能与 -s 参数一起使用</strong><ul>
+<li>简单说：手动设置后将是设置一个过滤一个</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2022/08/18/feroxbuster-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/image-20220819230456690.png"></p>
 <ul>
-<li>想看详细的工具介绍直接移步yakit 官网，这里只是自己的部分记录，并不全面</li>
+<li> –filter-similar-to <UNWANTED_PAGE>…：过滤掉与给定页面类似的页面</UNWANTED_PAGE></li>
+<li>例如：–filter-similar-to <a target="_blank" rel="noopener" href="http://site.xyz/soft404">http://site.xyz/soft404</a></li>
 </ul>
-</li>
-<li><p>打造 yakit 这款工具的团队雄心壮志，将持续关注</p>
+<p><img src="/2022/08/18/feroxbuster-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/image-20220819231123026.png"></p>
 <ul>
-<li>引用工具介绍的一句话：<code>akit是基于Yak语言开发的网络安全单兵工具，旨在打造一个覆盖渗透测试全流程的网络安全工具库</code></li>
+<li>  -s：允许显示状态码过滤，<strong>此参数不能与 -C 参数一起使用</strong></li>
+<li>默认显示的状态码：200 204 301 302 307 308 401 403 405</li>
 </ul>
-</li>
-</ul>
-<h2 id="工具下载安装"><a href="#工具下载安装" class="headerlink" title="工具下载安装"></a>工具下载安装</h2><ul>
-<li><p>通过 GitHub 地址下载：<a target="_blank" rel="noopener" href="https://github.com/yaklang/yakit/releases">https://github.com/yaklang/yakit/releases</a></p>
-</li>
-<li><p>此处安装在Windows中，双击安装，不让选择路径，程序自动指定路径。</p>
-</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722165911292.png"></p>
+<p><img src="/2022/08/18/feroxbuster-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/image-20220819231949200.png"></p>
 <ul>
-<li><p>安装完成后开始进行配置操作，先点击<code>核心引擎安装升级</code>，然后点击一键更新，等待更新完成</p>
+<li>-S：过滤掉特定大小的消息<ul>
+<li>例如：-S 5120 -S 4927,1970，此处的过滤大小应该是 Byte</li>
+</ul>
+</li>
+</ul>
+<p>​        <img src="/2022/08/18/feroxbuster-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/image-20220819232802209.png"></p>
+<h3 id="Scan-settings：扫描设置"><a href="#Scan-settings：扫描设置" class="headerlink" title="Scan settings：扫描设置"></a>Scan settings：扫描设置</h3><ul>
+<li><p> -d：最大递归深度，默认为4，如果设置为0则无限递归</p>
+</li>
+<li><p>此参数可设置递归层数</p>
+</li>
+</ul>
+<p>  <img src="/2022/08/18/feroxbuster-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/image-20220819234252067.png"></p>
 <ul>
-<li>后面会跳出几个弹窗，ok就好</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722170227972.png"></p>
+<li><p>-n：不进行递归扫描</p>
+<p><img src="/2022/08/18/feroxbuster-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/image-20220819234034133.png"></p>
 </li>
-<li><p>已管理员启动</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722170458045.png"></p>
-</li>
-<li><p>连接引擎</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722170615289.png"></p>
-</li>
-<li><p>连接引擎之后，正式进入工具使用</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722170643462.png"></p>
+<li><p> -t：线程数设置，默认为50</p>
 </li>
 </ul>
-<h2 id="更新插件源"><a href="#更新插件源" class="headerlink" title="更新插件源"></a>更新插件源</h2><h3 id="更新插件源-一-问题已解决"><a href="#更新插件源-一-问题已解决" class="headerlink" title="更新插件源(一)-问题已解决"></a>更新插件源(一)-问题已解决</h3><ul>
-<li><p>看到前面我们的yakit已经安装完成，进入工具使用界面，但是先不要着急体验，我们进入后首先要更新插件源，否则好多功能无法使用</p>
-</li>
-<li><p>但是，使用工具自动更新不成功，或者更新后无法显示</p>
+<p>  <img src="/2022/08/18/feroxbuster-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/image-20220819234650099.png"></p>
+<h2 id="工具使用总结"><a href="#工具使用总结" class="headerlink" title="工具使用总结"></a>工具使用总结</h2><ul>
+<li><p>总体而言此工具功能比较多也比较强大，其中还有很多的高级功能，可自行开发，对于此工具列出个常用的命令，使用时可直接赋值命令进行修改即可</p>
+<pre class="line-numbers language-none"><code class="language-none">.&#x2F;feroxbuster -u http:&#x2F;&#x2F;www.gshfns.com&#x2F; -w dict_mode_dict.txt -A -b stuff&#x3D;things -m GET&#x2F;POST  -s 200 -S 1143 -d 2 -t 100
+* -w ：给定自己准备好的字典，程序本身不带字典
+* -A ：使用随机user-agent，防止反爬拦截
+* -b ：添加cookie参数，可用于登录扫描
+* -m ：自定义请求方式GET、POST或者其他
+* -s ：允许显示的请求状态码，此参数与-C对立使用
+* -S ：过滤特定大小的数据包，大小单位为byte
+* -d ：设置扫描递归深度，-n：表示不使用递归扫描（一般都用-n)
+* -t ：线程数默认50，调节扫描速度<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p>工具使用可直接复制以上参数进行修改，若要设置更多功能参数看以上详解</p>
 <ul>
-<li>点击右上角的配置，更新Yakit插件源，官方与第三方<ul>
-<li>官方直接使用GitHub下载，第三方使用了GitHub的加速器下载（但是都不行）</li>
+<li>此处参数按照跟人习惯摘取，仁者见仁智者见智</li>
 </ul>
 </li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722174625148.png"></p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722174600861.png"></p>
-</li>
-<li><p>各位师傅可以试试，我是没有更新成功，更新后工具中还是没有显示插件，所以只能下载后本地导入</p>
-<ul>
-<li>Yakit 的官方插件<strong>仓库</strong>地址为 <code>https://github.com/yaklang/yakit-store</code></li>
-<li>上图中的官方<strong>POC</strong>源：<code>https://github.com/projectdiscovery/nuclei-templates</code></li>
-</ul>
-</li>
-<li><p>下载对应的源文件，通过本地导入，本地导入时注意一个是仓库，一个POC，分开导入即可</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722180608970.png"></p>
-</li>
-<li><p>都写到这里了上面的也就不删除了，前面遇到这个问题搞了好久最终决定用本地加载，本地刚加载完，发现工具有更新，更新之后，以上的问题自己好了，，，好了就好了，我们接着往下操作就是了</p>
-</li>
-</ul>
-<h3 id="更新插件源-二"><a href="#更新插件源-二" class="headerlink" title="更新插件源(二)"></a>更新插件源(二)</h3><ul>
-<li><p>承接上面的操作，使用官方源应为直接使用github所以会慢一点，这里建议直接使用第三方仓库源</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722213312332.png"></p>
-</li>
-<li><p>安装完成后就能在插件管理中看到对应的插件</p>
-<ul>
-<li>此处建议在网络良好的情况下，全选插件商店，下载到本地，测试过程中总是出现获取不到的情况<ul>
-<li>下载后可在旁边的<code>本地</code>处看到</li>
-</ul>
-</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722213954813.png"></p>
-</li>
-<li><p>此处我们已<code>重置 nuclei Yaml PoC 数据库</code>次插件为例</p>
-<ul>
-<li><p>点击下载，即可添加到插件仓库</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722214411843.png"></p>
-</li>
-<li><p>点击<code>启动任务</code>即可完成插件功能</p>
-<ul>
-<li>还没理解透：应该是对POC文件进行加载或者重新加载</li>
-<li>那么其他的插件可自行研究</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722214606492.png"></p>
-</li>
-<li><p>如：被动扫描插件，就是在抓包过程中进行被动漏洞探测等</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="手工渗透测试"><a href="#手工渗透测试" class="headerlink" title="手工渗透测试"></a>手工渗透测试</h2><h3 id="MITM模块"><a href="#MITM模块" class="headerlink" title="MITM模块"></a>MITM模块</h3><h4 id="MITM-中间人代理与劫持"><a href="#MITM-中间人代理与劫持" class="headerlink" title="MITM-中间人代理与劫持"></a>MITM-中间人代理与劫持</h4><ul>
-<li><p>这里类似与BurpSuite的拦截功能，实现的方式有所不同，带着这个思路往下走</p>
-<ul>
-<li>这里的插件是灰色，勾选下面的插件自动加载，插件就可选了</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722215750130.png"></p>
-</li>
-<li><p>点击劫持启动，浏览器配置对应的拦截IP地址与端口（与BP一致）</p>
-<ul>
-<li>1、拦截到数据包后放行，丢弃，劫持响应（对返回数据包拦截）</li>
-<li>2、已启用就是在上面配置过程中勾选的，全部：可以将所有的验证脚本都勾选上</li>
-<li>3、劫持响应是对所有的数据包进行拦截包括返回的数据包；手动劫持是开始拦截；自动方行是不拦截</li>
-<li>剩余的小点就不再说了如过滤器、匹配标记等</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722220310351.png"></p>
-</li>
-<li><p>此处与bp不同的地方，要想查看返回的响应包，就需要点击劫持响应，查看返回包，没有分屏显示</p>
-<ul>
-<li>感觉这个功能不好，没有重放分屏显示，不方便，不知道是不是我没找到</li>
-<li>右键可以发送到Web Fuzzer可以分屏显示不知道与BP是不是一个意思</li>
-</ul>
-</li>
-<li><p>右键菜单，这里先提下，后面说到每个模块的功能的时候补充</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722221405473.png"></p>
-</li>
-</ul>
-<h5 id="https证书"><a href="#https证书" class="headerlink" title="https证书"></a>https证书</h5><ul>
-<li><p>这里需要单独说下证书，为了抓取https的数据包没那么就需要安装相关证书，点击后有下载按钮，下载即可</p>
-</li>
-<li><p>下载后将文件后缀改成<code>.crt</code>，右键–安装证书-即可，安装过程不再截图</p>
-<ul>
-<li>之后既可以抓取https的数据包了</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723162656970.png"></p>
-</li>
-</ul>
-<h4 id="HTTP-History"><a href="#HTTP-History" class="headerlink" title="HTTP History"></a>HTTP History</h4><ul>
-<li><p>显示历史数据包，点击后显示详情</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722223629028.png"></p>
-</li>
-</ul>
-<h4 id="网站树视角"><a href="#网站树视角" class="headerlink" title="网站树视角"></a>网站树视角</h4><ul>
-<li>直观的看到扫描过的网站</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722223918043.png"></p>
-<ul>
-<li><p>右键可发送到三个模块</p>
-<ul>
-<li>后面看到者三个模块在详细介绍</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722224221232.png"></p>
-</li>
-<li><p>数据包最后的<code>详情</code></p>
-<ul>
-<li>可右键发送到Fuzzer模块，也就是数据包重放模块</li>
-<li>下面还有一部分显示，是对数据包的分解，添加了复制功能</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722224441594.png"></p>
-</li>
-<li><p>发送的数据包扫描</p>
-<ul>
-<li>只能选一个，点击开始</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722225135291.png"></p>
-<ul>
-<li><p>输出扫描结果，这里可以配合工具操作好理解点</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220722225221371.png"></p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="Web-Fuzzer-重放模块"><a href="#Web-Fuzzer-重放模块" class="headerlink" title="Web Fuzzer-重放模块"></a>Web Fuzzer-重放模块</h3><ul>
-<li>通过测试感觉自己的理解没有问题，Web Fuzzer应该类似于重放功能<ul>
-<li>部分标签功能还没熟悉，先简单说下使用</li>
-</ul>
-</li>
-</ul>
-<p>在前面的操作中右键有标签选项发送到 Fuzzer，就是发送到重放模块，如下图</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723163408479.png"></p>
-<ul>
-<li>1、就是将修改好的数据包进行发送，旁边会返回发送的结果数据包</li>
-<li>2、这里有个高级选项，看名字能知道一部分<ul>
-<li>设置代理：配置代理访问内网或者被墙的地址</li>
-<li>HTTPS：发送HTTPS的数据包</li>
-<li>请求HOST：应该是防护绕过的措施</li>
-</ul>
-</li>
-<li>3、此处可以修改数据包后通过1发送出去</li>
-</ul>
-<p>这个模块叫做 Web Fuzzer，那么就存在模糊测试的功能，但此处没没明白模糊测试的是哪些内容</p>
-<ul>
-<li>在数据包发送之后，点击<code>详情</code></li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723164043607.png"></p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723164127853.png"></p>
-<ul>
-<li><p>以上图片作为对比，这里点击模糊测试，数据包会发生变化，重新提交数据包</p>
-<ul>
-<li>这里能力有限，这个模糊测试的功能还是没有太明白是什么意思</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723164257481.png"></p>
-</li>
-</ul>
-<p><strong>那这个重放模块就到这里，后面看到具体功能点再做补充</strong></p>
-<h2 id="基础安全工具"><a href="#基础安全工具" class="headerlink" title="基础安全工具"></a>基础安全工具</h2><ul>
-<li>这个模块工具主要是一些基础的安全工具的集成</li>
-</ul>
-<h3 id="爆破与未授权"><a href="#爆破与未授权" class="headerlink" title="爆破与未授权"></a>爆破与未授权</h3><ul>
-<li>看图说话，看到内容就知道，主要是进行认证的爆破，爆破的类型目前就这几种，工具还在更新不知道作者的这个模块会不会更新<ul>
-<li>支持批量扫描，需要上传txt文件</li>
-</ul>
-</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723165906732.png"></p>
-<ul>
-<li><p>爆破最重要的是字典，不添加就使用默认字典，通过<code>更多参数</code>添加</p>
-<ul>
-<li><p>操作简单看图添加即可</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723165958944.png"></p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="基础爬虫"><a href="#基础爬虫" class="headerlink" title="基础爬虫"></a>基础爬虫</h3><ul>
-<li><p>输入需要爬取的目标，开始执行</p>
-<ul>
-<li>2处是该模块的代码，懂代码的师傅可以看看，自己就不班门弄斧了</li>
-<li>3处有点小问题，扫描记过可能会显示不全</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723170453273.png"></p>
-</li>
-<li><p>后面还有一个模块：基础爬虫[local]，自己没卡出来什么不一样，这里就不说了</p>
-</li>
-</ul>
-<h3 id="空间引擎"><a href="#空间引擎" class="headerlink" title="空间引擎"></a>空间引擎</h3><ul>
-<li>这里使用了奇安信的鹰图搜索，写上你的key，开始查询</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723172018976.png"></p>
-<h3 id="子域名收集"><a href="#子域名收集" class="headerlink" title="子域名收集"></a>子域名收集</h3><ul>
-<li><p>输入顶级域名，开始进行子域名查找，还可以查找C端</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723173002613.png"></p>
-</li>
-</ul>
-<h3 id="综合目录扫描"><a href="#综合目录扫描" class="headerlink" title="综合目录扫描"></a>综合目录扫描</h3><ul>
-<li><p>主要是进行目录扫描，类似御剑等工具，关键还是字典</p>
-<ul>
-<li>添加默认自带的字典文件进行扫描</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723173822109.png"></p>
-<ul>
-<li><p>通过额外参数添加自定义的字典文件或文件夹</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723173909878.png"></p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="专项漏洞检测"><a href="#专项漏洞检测" class="headerlink" title="专项漏洞检测"></a>专项漏洞检测</h2><ul>
-<li><p>通过最开始插件商店更新相关漏洞插件，这里可选择对应的漏洞进行检查，并显示检查结果</p>
-<ul>
-<li><p>POC也可以自己写，有相关的说明与插件编写方法</p>
-</li>
-<li><p>支持批量扫描，通过额外配置上传文件</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723174350678.png"></p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="payload管理"><a href="#payload管理" class="headerlink" title="payload管理"></a>payload管理</h2><ul>
-<li><p>通过此处可以上传字典，包括用户名与密码</p>
-<ul>
-<li>相关的按钮就是新增与上传字典，很简单</li>
-<li>此处出现了 Fuzz 模块的渲染，前面说自己不太懂的地方，等用到学会了再补充</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723174828241.png"></p>
-</li>
-</ul>
-<h2 id="Yak-Runner"><a href="#Yak-Runner" class="headerlink" title="Yak Runner"></a>Yak Runner</h2><ul>
-<li><p>这里应该是作者留下的用来测试yak代码的地方，通过运行按钮可以看到自己脚本输出成果</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723175247959.png"></p>
-</li>
-</ul>
-<h2 id="反连管理"><a href="#反连管理" class="headerlink" title="反连管理"></a>反连管理</h2><ul>
-<li>这个模块主要提供了：端口监听、反连服务器、DNSLog、ICMP-SizeLog、TCP-PortLog 五个功能。</li>
-<li>这里还没测试与使用过，暂时先不写<ul>
-<li>根据给出的模块功能，应该是内网穿透，数据包回传与监听的功能</li>
-</ul>
-</li>
-</ul>
-<h2 id="数据处理（小工具）"><a href="#数据处理（小工具）" class="headerlink" title="数据处理（小工具）"></a>数据处理（小工具）</h2><ul>
-<li><p>数据对比，将数据输入对比出不同的地方</p>
-<ul>
-<li>以下是百度百科，随便粘贴的</li>
-</ul>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723181101591.png"></p>
-</li>
-<li><p>codec，对常见的加密方式的汇总，包括国密算法</p>
-<p><img src="/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/image-20220723181259764.png"></p>
-</li>
-</ul>
-<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><ul>
-<li>最后的模块数据库，是对真个操作过程的记录，包括扫描结果的漏洞详情、端口资产、子域名资产、HTTP数据包历史记录等，支持表格导出</li>
-<li>就这样了，后面学会了再进行补充</li>
 </ul>
 
                 
@@ -764,7 +636,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jintianyouyu.github.io/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/">https://jintianyouyu.github.io/2022/07/22/yakit-%E5%8D%95%E5%85%B5%E4%BD%9C%E6%88%98%E6%AD%A6%E5%99%A8%E5%BA%93/</a>
+                    <a href="https://jintianyouyu.github.io/2022/08/18/feroxbuster-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/">https://jintianyouyu.github.io/2022/08/18/feroxbuster-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -848,17 +720,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/07/24/APT-Hunter-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/">
+                <a href="/2022/08/18/feroxbuster-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="APT-Hunter 日志分析工具（未完待续...）">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="feroxbuster-目录扫描工具">
                         
-                        <span class="card-title">APT-Hunter 日志分析工具（未完待续...）</span>
+                        <span class="card-title">feroxbuster-目录扫描工具</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -868,21 +741,22 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-07-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90-Windows/" class="post-category">
-                                    日志分析-Windows
+                            <a href="/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F/" class="post-category">
+                                    信息收集-目录扫描
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -901,13 +775,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/07/21/%E6%B0%B4%E6%B3%BD-%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/">
+                <a href="/2022/08/11/dirmap-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="水泽-信息收集自动化工具">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="dirmap-目录扫描工具">
                         
-                        <span class="card-title">水泽-信息收集自动化工具</span>
+                        <span class="card-title">dirmap-目录扫描工具</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -918,14 +792,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    信息收集自动化工具
+                            <a href="/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F/" class="post-category">
+                                    信息收集-目录扫描
                                 </a>
                             
                             
