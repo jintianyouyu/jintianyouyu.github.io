@@ -4,11 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="道-法-术-器-势-志, 今天有雨">
-    <meta name="description" content="用以督促自己，如有不对，见谅
-在做任何事都应该有目标与方向，俗话说的好“凡是想清楚，做事不糊涂”。
-作为刚入门安全行业的从业者，有不对的地方还请指正。
-无意间读到老子的理念，看到关于道、法、术、器、势、志的讲解，突然感觉和自己当前学习的过程">
+    <meta name="keywords" content="ServerScan-快速端口扫描工具, 今天有雨">
+    <meta name="description" content="关于工具
+工具下载：https://github.com/Adminisme/ServerScan
+工具介绍：一款使用Golang开发且适用于攻防演习内网横向信息收集的高并发网络扫描、服务探测工具。
+这里虽然写的是内网测试工具，实际应用分不">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +22,7 @@
 
     
 
-    <title>道-法-术-器-势-志 | 今天有雨</title>
+    <title>ServerScan-快速端口扫描工具 | 今天有雨</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -249,12 +249,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">道-法-术-器-势-志</h1>
+                    <h1 class="description center-align post-title">ServerScan-快速端口扫描工具</h1>
                 </div>
             </div>
         </div>
@@ -370,14 +370,23 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%B5%B7%E5%A7%8B%E7%AF%87/">
-                                <span class="chip bg-color">起始篇</span>
+                            <a href="/tags/%E5%99%A8%E5%AD%97%E7%AF%87/">
+                                <span class="chip bg-color">器字篇</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F/" class="post-category">
+                                信息收集-端口扫描
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -386,7 +395,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-07-30
+                    2022-08-26
                 </div>
                 
 
@@ -395,7 +404,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    808
+                    564
                 </div>
                 
 
@@ -420,46 +429,61 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>用以督促自己，如有不对，见谅</strong></p>
-<p>在做任何事都应该有目标与方向，俗话说的好“凡是想清楚，做事不糊涂”。</p>
-<p>作为刚入门安全行业的从业者，有不对的地方还请指正。</p>
-<p>无意间读到老子的理念，看到关于道、法、术、器、势、志的讲解，突然感觉和自己当前学习的过程很契合，因此做个记录。</p>
-<pre class="line-numbers language-none"><code class="language-none">道以明向，法以立本，术以立策，器以成事，势以立人,志已成事<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h2 id="关于工具"><a href="#关于工具" class="headerlink" title="关于工具"></a>关于工具</h2><ul>
+<li>工具下载：<a target="_blank" rel="noopener" href="https://github.com/Adminisme/ServerScan">https://github.com/Adminisme/ServerScan</a></li>
+<li>工具介绍：一款使用Golang开发且适用于攻防演习内网横向信息收集的高并发网络扫描、服务探测工具。<ul>
+<li>这里虽然写的是内网测试工具，实际应用分不了这么精细，内网的在外部打点也可以使用，外部打点的工具也可以在内网使用</li>
+<li>所以一个工具具体使用在哪里，不在自身的定义而在于你怎么用了</li>
+</ul>
+</li>
+</ul>
+<h2 id="参数介绍"><a href="#参数介绍" class="headerlink" title="参数介绍"></a>参数介绍</h2><ul>
+<li>工具有三种，简洁版，专业版，Cobalt Strike版本，这里介绍Windows_x64专业版</li>
+<li>参数介绍</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">Usage of ServerScan_Pro_v1.0.2_windows_x64.exe:
+  -h string
+        带扫描主机支持的 4 种格式:
+        192.168.1.1
+        192.168.1.1-10
+        192.168.1.*
+        192.168.1.0&#x2F;24.
+  -m string
+        扫描类型 icmp 或 tcp. (默认 &quot;icmp&quot;)
+  -o string
+        扫描信息输出到文件
+  -p string
+        自定义扫描端口，用 &#39;,&#39; 分隔。例如: 21,22,80-99,8000-8080 ... (默认端口 &quot;80-99,7000-9000,9001-9999,4430,1433,1521,3306,5000,5432,6379,21,22,100-500,873,4440,6082,3389,5560,5900-5909,1080,1900,10809,50030,50050,50070&quot;)
+  -t int（整数）
+        设置扫描超时时间,最大超时间 30 秒. (默认为 2 秒)
+  -v    版本信息<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="工具使用"><a href="#工具使用" class="headerlink" title="工具使用"></a>工具使用</h2><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;自己的理解
+ICMP协议，可能是使用了 ICMP 协议所以最初定位内网扫描工具，因为外网探测防护设备可能拒绝ICMP协议探测，造成漏报，内网存在这种的可能就比较少<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <ul>
-<li>道：道以向明，”道生一，一生二，二生三，三生万物“，道是所有事情的起源，所有的事情都已道为基础，道是所有事情的依据与基石。道法自然，什么是自然，自然而然，本身就存在的。道是宇宙万物和谐运行的本质规律，道应当存在但是又不存在。<ul>
-<li>道自己无法理解，到底是标准算作是道，还是安全的意识算作是道，或者二进制的0和1才算是道，再慢慢体会吧。</li>
-</ul>
-</li>
-<li>法：事物的规律与规则，代表天人合一、顺其自然的最高行事准则。<ul>
-<li>法就是规律，或许理解不对，在我的日常中我的理解就是原理，漏洞的利用原理，工具的编写原理等，凡是关于原理类相关的内容，皆属于法</li>
-</ul>
-</li>
-<li>术：战术、技术、具体的手段、具体的行为方式等，古时候可能更多的是御人之术<ul>
-<li>术，可字面意思理解，即为：技术，战术，常说的技战法，如，漏洞靶机的攻击方法，漏洞利用的方法等，凡是关于方法的介绍内容，皆属于术</li>
-</ul>
-</li>
-<li>器：即是工具与手段，为实现术而存在。<ul>
-<li>器，”操千曲而后晓声,观千剑而后识器“，器即为工具，工具的介绍、工具的用法，皆属于器</li>
-</ul>
-</li>
-<li>势：是一种比较抽象但又具体存在的事物，如磁场一样，凡事物的发展，宇宙万物的运行皆与势相关<ul>
-<li>势，就是个人的努力，器、术、法，如果所有的资源都有，但是不去学习，不去努力，也就是无势，再好的资源也无用</li>
-</ul>
-</li>
-<li>志：即志向，要完成的事<ul>
-<li>道、法、术、器、势最终目的是要完成某一既定目标，要完成你要完成的事，道、法、术、器、势可以说皆是工具，为了完成志的工具</li>
-</ul>
-</li>
-</ul>
-<p>说了这没多，以下定了：法字篇、术字篇、器字篇，道字篇（道还没理解不敢乱写），开始努力完成每个标签中的内容，通过努力这个势，完成自己的志。</p>
+<li><p>此工具的主要的 3 个功能：探测存活主机，快速扫描全端口（可自定义），识别端口服务</p>
 <ul>
-<li>道字篇：法、术、器、势、志的完成慢慢理解道</li>
-<li>法字篇：漏洞原理分析、工具的原理（写工具）、代码原理等，术的大量联系完成法</li>
-<li>术字篇：靶机攻击方法、漏洞利用等，器的组合使用完成术</li>
-<li>器字篇：工具收集、工具的介绍（用途、用法），器的厚积薄发，器要越用越少</li>
-<li>势：完善以上内容即是势</li>
-<li>志：志就不说了等完成了再写出来</li>
+<li><p>首先探测主机存活</p>
+<p><img src="/2022/08/26/ServerScan-%E5%BF%AB%E9%80%9F%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/image-20220827115428223.png"></p>
+</li>
+<li><p>其次探测端口开放</p>
+<p><img src="/2022/08/26/ServerScan-%E5%BF%AB%E9%80%9F%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/image-20220827115500007.png"></p>
+</li>
+<li><p>最后对开放对口进行识别</p>
+<p><img src="/2022/08/26/ServerScan-%E5%BF%AB%E9%80%9F%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/image-20220827115527365.png"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="使用总结"><a href="#使用总结" class="headerlink" title="使用总结"></a>使用总结</h2><ul>
+<li><p>如前面所说，建议还是在内网中探测资产使用，外部打点可能会出现漏报情况</p>
+<ul>
+<li>如果外部扫描使用后，可使用 nmap 再进行深入探测</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">外部打点使用（全端口扫描），建议使用默认的ICMP
+ServerScan_Pro_v1.0.2_windows_x64.exe -h 192.168.110.* -p 1-65535
+既然定义为内网工具，建议还是内网使用（看个人喜好），使用方式与上边相同<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 
                 
@@ -477,7 +501,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer"></a>
+                    <a href="/about" rel="external nofollow noreferrer">今天有雨</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -487,7 +511,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jintianyouyu.github.io/2022/07/30/%E9%81%93-%E6%B3%95-%E6%9C%AF-%E5%99%A8-%E5%8A%BF-%E5%BF%97/">https://jintianyouyu.github.io/2022/07/30/%E9%81%93-%E6%B3%95-%E6%9C%AF-%E5%99%A8-%E5%8A%BF-%E5%BF%97/</a>
+                    <a href="https://jintianyouyu.github.io/2022/08/26/ServerScan-%E5%BF%AB%E9%80%9F%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/">https://jintianyouyu.github.io/2022/08/26/ServerScan-%E5%BF%AB%E9%80%9F%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -500,7 +524,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank"></a>
+                    <a href="/about" target="_blank">今天有雨</a>
                     !
                 </span>
             </div>
@@ -525,8 +549,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%B5%B7%E5%A7%8B%E7%AF%87/">
-                                    <span class="chip bg-color">起始篇</span>
+                                <a href="/tags/%E5%99%A8%E5%AD%97%E7%AF%87/">
+                                    <span class="chip bg-color">器字篇</span>
                                 </a>
                             
                         </div>
@@ -571,17 +595,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/08/11/dirmap-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/">
+                <a href="/2022/08/26/ServerScan-%E5%BF%AB%E9%80%9F%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="dirmap-目录扫描工具">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="ServerScan-快速端口扫描工具">
                         
-                        <span class="card-title">dirmap-目录扫描工具</span>
+                        <span class="card-title">ServerScan-快速端口扫描工具</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -591,21 +616,22 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-08-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F/" class="post-category">
-                                    信息收集-目录扫描
+                            <a href="/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F/" class="post-category">
+                                    信息收集-端口扫描
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -624,13 +650,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/07/26/timeketch-%E5%8D%8F%E4%BD%9C%E5%8F%96%E8%AF%81%E6%97%B6%E9%97%B4%E8%BD%B4%E5%88%86%E6%9E%90/">
+                <a href="/2022/08/18/feroxbuster-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F%E5%B7%A5%E5%85%B7/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="timeketch-协作取证时间轴分析（未完待续...)">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="feroxbuster-目录扫描工具">
                         
-                        <span class="card-title">timeketch-协作取证时间轴分析（未完待续...)</span>
+                        <span class="card-title">feroxbuster-目录扫描工具</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -641,14 +667,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-18
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/" class="post-category">
-                                    日志分析
+                            <a href="/categories/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E7%9B%AE%E5%BD%95%E6%89%AB%E6%8F%8F/" class="post-category">
+                                    信息收集-目录扫描
                                 </a>
                             
                             
