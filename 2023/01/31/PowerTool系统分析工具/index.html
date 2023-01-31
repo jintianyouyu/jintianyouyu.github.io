@@ -4,11 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="系统深度分析工具（ATool_3.2.0.2）, 今天有雨">
-    <meta name="description" content="总结
-此工具属于Windows系统分析工具，工具内容与其他系统分析工具相同，先说个人感觉
+    <meta name="keywords" content="PowerTool系统分析工具, 今天有雨">
+    <meta name="description" content="工具总结
+此工具能够满足应急响应中的大部分需求，可显示：网络、进程、端口、内核等，个人感觉比较好用，工具定位是手工杀毒服务软件
 
-此类工具找到一个好用的即可，该工具个人感觉功能比较欠缺，很多功能模块还未完善，所以个人建议还是使用其他的工具代替，至于替代品暂时没有很好的推荐，自行">
+注意：
+在使用过程中，如果是用户服务器，内核部分慎重点击，可能导致系统蓝屏
+系统进程可能无法获取，可通过其他工">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +24,7 @@
 
     
 
-    <title>系统深度分析工具（ATool_3.2.0.2） | 今天有雨</title>
+    <title>PowerTool系统分析工具 | 今天有雨</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -249,12 +251,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">系统深度分析工具（ATool_3.2.0.2）</h1>
+                    <h1 class="description center-align post-title">PowerTool系统分析工具</h1>
                 </div>
             </div>
         </div>
@@ -382,8 +384,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-Windows%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/" class="post-category">
-                                应急响应-Windows系统分析
+                            <a href="/categories/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-Windows%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%EF%BC%88%E6%89%8B%E5%8A%A8%E6%9D%80%E6%AF%92%EF%BC%89/" class="post-category">
+                                应急响应-Windows系统分析（手动杀毒）
                             </a>
                         
                     </div>
@@ -404,7 +406,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    576
+                    485
                 </div>
                 
 
@@ -429,38 +431,54 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
-<li><p>此工具属于Windows系统分析工具，工具内容与其他系统分析工具相同，先说个人感觉</p>
+                <h1 id="工具总结"><a href="#工具总结" class="headerlink" title="工具总结"></a>工具总结</h1><ul>
+<li><p>此工具能够满足应急响应中的大部分需求，可显示：网络、进程、端口、内核等，个人感觉比较好用，工具定位是<strong>手工杀毒服务软件</strong></p>
 <ul>
-<li><strong>此类工具找到一个好用的即可，该工具个人感觉功能比较欠缺，很多功能模块还未完善，所以个人建议还是使用其他的工具代替，至于替代品暂时没有很好的推荐，自行寻找吧</strong><ul>
-<li><em>记得之前用的<strong>PCHunter</strong>工具的功能比较强大，但此工具之后的版本加载驱动有问题，可以申请使用版本试试：<a target="_blank" rel="noopener" href="https://www.anxinsec.com/view/antirootkit/">https://www.anxinsec.com/view/antirootkit/</a></em></li>
+<li><strong>注意</strong>：<ul>
+<li><strong>在使用过程中，如果是用户服务器，内核部分慎重点击，可能导致系统蓝屏</strong></li>
+<li><strong>系统进程可能无法获取，可通过其他工具辅助查看</strong></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>整体功能还是一样：<strong>进程、端口、注册表、自启动项、内核等</strong></p>
+<li><p>之前用过一款工具PCHunter，感觉工具功能比较强大，但PCHunter目前在Win 10后面的版本显示<code>驱动无法加载</code>，可能申请使用可以解决，PowerTool感觉是PCHunter挺好的一个替代品</p>
 <ul>
-<li>但部分功能有欠缺，如果有更好的替代品不建议使用</li>
-<li>可作为前期学习过程的工具使用</li>
+<li>申请地址：<a target="_blank" rel="noopener" href="https://www.anxinsec.com/view/antirootkit/">https://www.anxinsec.com/view/antirootkit/</a></li>
 </ul>
 </li>
-<li><p>官方给出的功能介绍（看看就行）：</p>
-<pre class="line-numbers language-none"><code class="language-none">* 系统深度分析工具（ATool）
-        系统深度分析工具（简称ATool）是安天面向威胁检测与威胁分析人员开发的Windows系统深度分析工具，其通过对系统内核模块、驱动、服务、进程、模块、端口等信息进行分析关联，进行对象的安全检查和可信验证，协助完成手动分析处置工作。该工具最早版本发布于2002年，并在2006年引入了四层守信模型进行安全分析，是安天威胁分析猎杀工程师的必备工具。
-        ATool提供多种系统内核级分析模块，能够对系统中的端口、进程、自启动项、内核信息、各类钩子、主引导记录等内容进行细致深入的行为判断和特征分析，通过数字签名验证及云检测，对每个文件的受信状态进行判定，同时能够为不同的检测对象提供相应的处置手段，辅助专业级用户对威胁进行处理。其交互界面友好易用，方便用户对检测对象的详细信息进行跟踪查看。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
-<li><p>下载地址：</p>
-<pre class="line-numbers language-none"><code class="language-none">链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1EVaZ-wxztokwEB4evhg86g 
-提取码：xh4s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 </ul>
-<h1 id="工具界面"><a href="#工具界面" class="headerlink" title="工具界面"></a>工具界面</h1><ul>
-<li><p>工具使用界面（挺简单的，可自行研究）</p>
+<h1 id="工具介绍"><a href="#工具介绍" class="headerlink" title="工具介绍"></a>工具介绍</h1><pre class="line-numbers language-none"><code class="language-none">* 工具使用比较简单，这里介绍几个功能，具体还是在实际的应急响应工作中去使用<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <ul>
-<li>32或者64可自行选择</li>
+<li><p><strong>系统修复：</strong>此部分功能对系统进行简单的扫描，对系统的安全状态做初步的监测</p>
+<ul>
+<li>给出初步的检测结论</li>
 </ul>
-<p><img src="/2023/01/31/%E7%B3%BB%E7%BB%9F%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7%EF%BC%88ATool-3-2-0-2%EF%BC%89/image-20230131105000191.png"></p>
-<p><img src="/2023/01/31/%E7%B3%BB%E7%BB%9F%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7%EF%BC%88ATool-3-2-0-2%EF%BC%89/image-20230131105106680.png"></p>
+<p><img src="/2023/01/31/PowerTool%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20230131152748696.png"></p>
+</li>
+<li><p><strong>应用层：</strong>对系统应用层的程序进行统计，几个比较关键的：检测键盘监听、消息钩子、重要系统文件等</p>
+<p><img src="/2023/01/31/PowerTool%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20230131153304769.png"></p>
+</li>
+<li><p><strong>网络：</strong>对系统的端口以及外联网络进行分析。按照程序要求可以对外联的地址归属地也可以显示。</p>
+<ul>
+<li>应急中可以查看外联目标，如果能够将归属地显示出来，可以更快速的辨别恶意外联</li>
+</ul>
+<p><img src="/2023/01/31/PowerTool%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20230131153510242.png"></p>
+</li>
+<li><p>硬件温度检测：显示的信息很全面，这里是虚拟机所以信息不多，可自行物理机测试</p>
+<ul>
+<li>买电脑的时候也可以用此软件进行测试，能够看到硬盘的厂商、使用次数，并且回提示硬盘的新旧，很直观</li>
+</ul>
+<p><img src="/2023/01/31/PowerTool%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20230131153735972.png"></p>
+<ul>
+<li><p>物理机检测结果</p>
+<p><img src="/2023/01/31/PowerTool%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/image-20230131154359959.png"></p>
 </li>
 </ul>
+</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">其他功能就不再介绍了，手动查杀杀毒的辅助工具，可自行测试使用<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 
                 
             </div>
@@ -487,7 +505,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jintianyouyu.github.io/2023/01/31/%E7%B3%BB%E7%BB%9F%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7%EF%BC%88ATool-3-2-0-2%EF%BC%89/">https://jintianyouyu.github.io/2023/01/31/%E7%B3%BB%E7%BB%9F%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7%EF%BC%88ATool-3-2-0-2%EF%BC%89/</a>
+                    <a href="https://jintianyouyu.github.io/2023/01/31/PowerTool%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/">https://jintianyouyu.github.io/2023/01/31/PowerTool%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -571,9 +589,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2023/01/31/PowerTool%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/">
                     <div class="card-image">
@@ -591,9 +610,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-01-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -606,6 +625,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -624,13 +644,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/12/15/APP%E6%8A%93%E5%8C%85%E6%96%B9%E6%B3%95%E6%A2%B3%E7%90%86/">
+                <a href="/2023/01/31/%E7%B3%BB%E7%BB%9F%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7%EF%BC%88ATool-3-2-0-2%EF%BC%89/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="APP抓包方法梳理">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="系统深度分析工具（ATool_3.2.0.2）">
                         
-                        <span class="card-title">APP抓包方法梳理</span>
+                        <span class="card-title">系统深度分析工具（ATool_3.2.0.2）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -641,14 +661,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-31
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%B8%97%E9%80%8F-%E6%8A%93%E5%8C%85/" class="post-category">
-                                    移动端渗透-抓包
+                            <a href="/categories/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94-Windows%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/" class="post-category">
+                                    应急响应-Windows系统分析
                                 </a>
                             
                             
@@ -658,8 +678,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9C%AF%E5%AD%97%E7%AF%87/">
-                        <span class="chip bg-color">术字篇</span>
+                    <a href="/tags/%E5%99%A8%E5%AD%97%E7%AF%87/">
+                        <span class="chip bg-color">器字篇</span>
                     </a>
                     
                 </div>
